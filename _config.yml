@@ -1,4 +1,4 @@
-theme: jekyll-theme-minima
-title: 情報です
+remote_theme: "jekyll/minima@1e8a445"
+title: 情報
 description: テスト
 show_downloads: false
