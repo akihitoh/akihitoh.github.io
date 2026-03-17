@@ -1,0 +1,16 @@
+services:
+  jekyll:
+    image: ruby:3.2
+    working_dir: /site
+    volumes:
+      - .:/site
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "4001:4000"
+    command: >
+      sh -c "gem install bundler &&
+             bundle install &&
+             bundle exec jekyll serve --host 0.0.0.0 --port 4000"
+
+volumes:
+  bundle_cache:

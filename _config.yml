@@ -1,5 +1,13 @@
 remote_theme: jekyll/minima
 #theme: jekyll-theme-minima
-title: 情報
-description: テスト
+title: 廣森 聡仁 (Akihito Hiromori)
+description: 大阪大学
 show_downloads: false
+
+# MinimaのHeader Linksを使用
+header_pages:
+  - projects.md
+  - works.md
+  - software.md
+  - funds.md
+  - media.md
