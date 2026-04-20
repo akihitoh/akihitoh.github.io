@@ -2,13 +2,9 @@
 main:
   - title: "ホーム"
     url: /
-  - title: "研究プロジェクト"
-    url: /projects
   - title: "研究業績"
     url: /works
-  - title: "ソフトウェア・データ"
-    url: /software
   - title: "外部研究資金"
     url: /funds
-  - title: "メディア掲載"
-    url: /media
+  - title: "About (English)"
+    url: /about-en
