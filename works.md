@@ -63,33 +63,34 @@
 ## 国際会議
 
 <details open>
-<summary>2020-（25件）</summary>
+<summary>2020-（18件）</summary>
 <div markdown="1">
 
-1. Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", ICDCN Companion 2026, pp.24-25, 2026.
-2. Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", ICDCN Companion 2026, pp.30-31, 2026.
-3. Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", ICDCN Companion 2026, pp.32-33, 2026.
-4. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", ICDCN Companion 2026, pp.36-37, 2026.
-5. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", ICDCN Companion 2026, pp.46-47, 2026.
-6. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.
-7. Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.
-8. Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.
-9. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.
-10. Doyoon Lee, Akihito Hiromori, Mineo Takai, Hirozumi Yamaguchi, "Efficient On-Ramp Merging Point Prediction Using Machine Learning", 27th IEEE International Conference on Intelligent Transportation Systems (ITSC 2024), pp.687-692, Sep 2024.
-11. Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.
-12. Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "A Method for Building Recognition from Point Cloud obtained by UAV with Simple Trajectory Patterns", The 2022 IEEE 8th World Forum on Internet of Things (WF-IoT 2022), Oct 2022.
-13. Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), Mar 2022.
-14. Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.
-15. Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.
-16. Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), Oct 2020.
-17. Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.
+1. Sodai Joshin, Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, Takahiro Inagawa, "Preliminary Evaluation of HPC-Based Scenario Analysis for Dense Formation Flying", SC-Asia 2026 (Poster P-226), 2026.
+2. Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", ICDCN Companion 2026, pp.24-25, 2026.
+3. Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", ICDCN Companion 2026, pp.30-31, 2026.
+4. Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", ICDCN Companion 2026, pp.32-33, 2026.
+5. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", ICDCN Companion 2026, pp.36-37, 2026.
+6. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", ICDCN Companion 2026, pp.46-47, 2026.
+7. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.
+8. Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.
+9. Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.
+10. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.
+11. Doyoon Lee, Akihito Hiromori, Mineo Takai, Hirozumi Yamaguchi, "Efficient On-Ramp Merging Point Prediction Using Machine Learning", 27th IEEE International Conference on Intelligent Transportation Systems (ITSC 2024), pp.687-692, Sep 2024.
+12. Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.
+13. Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "A Method for Building Recognition from Point Cloud obtained by UAV with Simple Trajectory Patterns", The 2022 IEEE 8th World Forum on Internet of Things (WF-IoT 2022), Oct 2022.
+14. Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.593-598, Mar 2022.
+15. Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.
+16. Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.
+17. Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.1-6, Oct 2020.
+18. Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.
 
 </div>
 </details>
 
 
 <details>
-<summary>2010-2019年（59件）</summary>
+<summary>2010-2019年（61件）</summary>
 <div markdown="1">
 
 <ol start="18">
@@ -98,7 +99,7 @@
 <li>Takayuki Saki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Occlusion-based trajectory estimation for pedestrians using LiDAR sensors", CEUR Workshop Proceedings, Vol.2498, pp.400-407, 2019.</li>
 <li>Hikaru Yoshisada, Yuma Yamada, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Map Generation from Multiple LIDAR Point Clouds", 2018 IEEE International Conference on Smart Computing (SMARTCOMP 2018), pp.73-80, Jun 2018.</li>
 <li>Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Takaaki Umedu, "Re-Thinking: Design and Development of Mobility Aware Applications in Smart and Connected Communities", 38th IEEE International Conference on Distributed Computing Systems (ICDCS 2018), pp.1171-1179, Jul 2018.</li>
-<li>Yusuke Nishimura, Tatsuaki Osafune, Seiya Kato, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Vehicle Proximity Awareness by Inter-Vehicle Communication for Surface Mine Operation Safety", IEEE Vehicular Technology Conference, Nov 2017.</li>
+<li>Yusuke Nishimura, Tatsuaki Osafune, Seiya Kato, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Vehicle Proximity Awareness by Inter-Vehicle Communication for Surface Mine Operation Safety", IEEE Vehicular Technology Conference, pp.1-7, Nov 2017.</li>
 <li>Sohei Kojima, Akira Uchiyama, Masumi Shirakawa, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Crowd and Event Detection by Fusion of Camera Images and Micro Blogs", 2017 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.213-218, 2017.</li>
 <li>Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Keiichi Yasumoto, "Edge Computing and IoT Based Research for Building Safe Smart Cities Resistant to Disasters", 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS 2017), pp.1729-1737, 2017.</li>
 <li>Yuma Yamada, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Travel Estimation Using Control Signal Records in Cellular Networks and Geographical Information", 2016 9th IFIP Wireless and Mobile Networking Conference (WMNC), pp.138-144, 2016.</li>
@@ -107,7 +108,9 @@
 <li>Kenji Yoi, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Teruo Higashino, Naohisa Yanagiya, Toshikazu Nakatani, Atsuo Tachibana, Teruyuki Hasegawa, "Multi-dimensional sensor data aggregator for adaptive network management in M2M communications", 2015 IFIP/IEEE International Symposium on Integrated Network Management (IM 2015), pp.1047-1052, May 2015.</li>
 <li>Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Shinji Shimojo, "Human crowd detection for physical sensing assisted geo-social multimedia mining", 2015 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), pp.642-647, Apr 2015.</li>
 <li>Takumi Satoh, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A novel estimation method of road condition for pedestrian navigation", 2015 IEEE International Conference on Pervasive Computing and Communication Workshops (PerMoby 2015), pp.427-432, Mar 2015.</li>
-<li>Tomoyuki Tange, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "An Analysis Model of Queue Length Fluctuation at Signals Using Vehicle Trajectories", The 3rd International Conference on Connected Vehicles & Expo (ICCVE 2014), Nov 2014.</li>
+<li>Ryosuke Tanimura, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Prediction of Deceleration Amount of Vehicle Speed in Snowy Urban Roads Using Weather Information and Traffic Data", 2015 IEEE 18th International Conference on Intelligent Transportation Systems (ITSC 2015), pp.2268-2273, 2015.</li>
+<li>Tomoyuki Tange, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "An Analysis Model of Queue Length Fluctuation at Signals Using Vehicle Trajectories", The 3rd International Conference on Connected Vehicles & Expo (ICCVE 2014), pp.577-583, Nov 2014.</li>
+<li>Takumi Takafuji, Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Localization Utilizing Tracking Scanners and Motion Sensors", 2014 IEEE Eleventh International Conference on Ubiquitous Intelligence and Computing (UIC/ATC/ScalCom 2014), pp.112-119, 2014.</li>
 <li>Yuma Akai, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Mitigating location and speed errors in floating car data using context-based accuracy estimation", 2013 13th International Conference on ITS Telecommunications (ITST), pp.104-110, Nov 2013.</li>
 <li>Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Shigeki Umehara, Hirofumi Urayama, Masaya Yamada, Taka Maeno, Shigeru Kaneda, Mineo Takai, "A novel scheduling algorithm for densely-deployed wireless stations in urban areas", Proceedings of the 16th ACM international conference on Modeling, analysis & simulation of wireless and mobile systems - MSWiM '13, pp.317-326, Nov 2013 (New York, New York, USA).</li>
 <li>Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Sensor Placement Optimization Method for People Tracking", 2013 Seventh International Conference on Next Generation Mobile Apps, Services and Technologies (NGMAST 2013), pp.62-67, Sep 2013.</li>
@@ -129,19 +132,20 @@
 
 
 <details>
-<summary>2001-2009年（11件）</summary>
+<summary>2001-2009年（12件）</summary>
 <div markdown="1">
-<ol start="47">
+<ol start="49">
 <li>Keisuke Nakata, Kumiko Maeda, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Modeling and Evaluation of Rescue Operations Using Mobile Communication Devices", 2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation (PADS 2009), pp.64-71, Jun 2009 (Lake Placid, NY USA).</li>
 <li>Yuki Sakai, Akihito Hiromori, Hirozumi Yamaguchi, Khaled El-Fakih, Teruo Higashino, "An integrated tool for development of overlay services", 2nd International Conference on Simulation Tools and Techniques (SIMUTools'09), pp.61, Mar 2009 (Rome, Italy).</li>
 <li>Kazushi Ikeda, Shunsuke Mori, Yuya Ota, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "D-Sense: An Integrated Environment for Algorithm Design and Protocol Implementation in Wireless Sensor Networks", 11th IFIP/IEEE international conference on Management of Multimedia and Mobile Networks and Services (IFIP/IEEE MMNS 2008), pp.20-32, Sep 2008 (Samos Island, Greece).</li>
 <li>Shigeru Kaneda, Akihito Hiromori, Yoshikazu Akinaga, Noriteru Shinagawa, Kazuo Sugiyama, Mineo Takai, "Performance Evaluation of Network Systems Accounting for User Behaviors", IEEE International Conference on Communications 2007 (ICC2007), pp.57-64, Jun 2007 (Glasgow, Scotland, UK).</li>
 <li>Thilmee Malinda Baduge, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Design and Implementation of Overlay Multicast Protocol for Multimedia Streaming", 2005 International Conference on Parallel Processing (ICPP'05), pp.41-48, Jun 2005 (Oslo, Norway).</li>
+<li>Hirozumi Yamaguchi, Khaled El-Fakih, Akihito Hiromori, Teruo Higashino, "A formal approach to design optimized multimedia service overlay", Proceedings of the 15th International Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2005), pp.57-62, 2005.</li>
 <li>Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Kenichi Taniguchi, "An Autonomous and Decentralized Protocol for Delay Sensitive Overlay Multicast Tree", 24th International Conference on Distributed Computing Systems (ICDCS'04), pp.662-669, Mar 2004 (Tokyo, Japan).</li>
 <li>Yoshitaka Nakamura, Hirozumi Yamaguchi, Akihito Hiromori, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "On Designing End-user Multicast for Multiple Video Sources", 2003 International Conference on Multimedia and Expo (IEEE ICME2003), III 497-500, Jul 2003 (Baltimore, MD USA).</li>
 <li>Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Reducing the Size of Routing Tables for Large-scale Network Simulation", 17th workshop on Parallel and Distributed Simulation (PADS '03), pp.115-122, Jun 2003 (San Diego, CA USA).</li>
-<li>Hirozumi Yamaguchi, Cao Man Letan, Akihito Hiromori, Takeshi Yamashita, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Receiver Coordination Protocol for the Efficient Use of Bandwidth in Distributed Multimedia Applications", 23rd International Conference on Distributed Computing Systems Workshops (ICDCSW'03), pp.531, May 2003 (Providence, RI USA).</li>
-<li>Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Server Selection Algorithm for Replicated Video Multicast Based on Packet Monitoring", 2002 International Conference on Parallel Processing (ICPP'02), pp.556-563, Aug 2002 (Vancouver, Canada).</li>
+<li>Hirozumi Yamaguchi, Cao Man Letan, Akihito Hiromori, Takeshi Yamashita, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Receiver Coordination Protocol for the Efficient Use of Bandwidth in Distributed Multimedia Applications", 23rd International Conference on Distributed Computing Systems Workshops (ICDCSW'03), pp.531-536, May 2003 (Providence, RI USA).</li>
+<li>Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Server Selection Algorithm for Replicated Video Multicast Based on Packet Monitoring", 2002 International Conference on Parallel Processing (ICPP'02), pp.556-566, Aug 2002 (Vancouver, Canada).</li>
 <li>Akihito Hiromori, Takeshi Yamashita, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Quality Requirement Coordination in Rate Adaptation of Multiple Layered Videos", 2nd ACIS International Conference on Software Engineering Applied to Networking & Parallel/Distributed Computing (SNPD'01), pp.540-547, Aug 2001 (Nagoya, Japan).</li>
 </ol>
 </div>
@@ -150,7 +154,7 @@
 <details>
 <summary>-2000年（1件）</summary>
 <div markdown="1">
-<ol start="58">
+<ol start="61">
 <li>Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Fast and Optimal Multicast-Server Selection Based on Receiver' Preference", 7th International Workshop on Interactive Distributed Multimedia Systems and Telecommunication Services (IDMS 2000), pp.40-52, Oct 2000 (Enschede, Netherlands).</li>
 </ol>
 
