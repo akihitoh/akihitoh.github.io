@@ -63,27 +63,30 @@
 ## 国際会議
 
 <details open>
-<summary>2020-（18件）</summary>
+<summary>2020-（21件）</summary>
 <div markdown="1">
 
 1. Sodai Joshin, Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, Takahiro Inagawa, "Preliminary Evaluation of HPC-Based Scenario Analysis for Dense Formation Flying", SC-Asia 2026 (Poster P-226), 2026.
-2. Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", ICDCN Companion 2026, pp.24-25, 2026.
-3. Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", ICDCN Companion 2026, pp.30-31, 2026.
-4. Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", ICDCN Companion 2026, pp.32-33, 2026.
-5. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", ICDCN Companion 2026, pp.36-37, 2026.
-6. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", ICDCN Companion 2026, pp.46-47, 2026.
-7. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.
-8. Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.
-9. Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.
-10. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.
-11. Doyoon Lee, Akihito Hiromori, Mineo Takai, Hirozumi Yamaguchi, "Efficient On-Ramp Merging Point Prediction Using Machine Learning", 27th IEEE International Conference on Intelligent Transportation Systems (ITSC 2024), pp.687-692, Sep 2024.
-12. Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.
-13. Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "A Method for Building Recognition from Point Cloud obtained by UAV with Simple Trajectory Patterns", The 2022 IEEE 8th World Forum on Internet of Things (WF-IoT 2022), Oct 2022.
-14. Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.593-598, Mar 2022.
-15. Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.
-16. Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.
-17. Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.1-6, Oct 2020.
-18. Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.
+2. Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.24-25, 2026.
+3. Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.30-31, 2026.
+4. Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.32-33, 2026.
+5. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.36-37, 2026.
+6. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.46-47, 2026.
+7. Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Probabilistic Distributed Scheduling for Emergency LoRa Networks", The 8th International Workshop on Security, Privacy and Trust in the Internet of Things (SPT-IoT 2026) in conjunction with IEEE PerCom 2026, Mar 2026.
+8. Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, "Toward Massive Satellite Swarms: A Simulation Framework for Precision Formation Flying", 2026 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops), PerVehicle, pp.230-235, Mar 2026.
+9. Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sumio Morioka, Takahiro Inagawa, "Accurate and Scalable Simulation for Large Formation-Flying Satellite Arrays", 2025 IEEE Annual Congress on Artificial Intelligence of Things (AIoT 2025), pp.449-456, Dec 2025.
+10. Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.
+11. Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.
+12. Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.
+13. Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.
+14. Doyoon Lee, Akihito Hiromori, Mineo Takai, Hirozumi Yamaguchi, "Efficient On-Ramp Merging Point Prediction Using Machine Learning", 27th IEEE International Conference on Intelligent Transportation Systems (ITSC 2024), pp.687-692, Sep 2024.
+15. Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.
+16. Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "A Method for Building Recognition from Point Cloud obtained by UAV with Simple Trajectory Patterns", The 2022 IEEE 8th World Forum on Internet of Things (WF-IoT 2022), Oct 2022.
+17. Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.593-598, Mar 2022.
+18. Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.
+19. Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.
+20. Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.1-6, Oct 2020.
+21. Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.
 
 </div>
 </details>
@@ -388,24 +391,4 @@
 </ol>
 </div>
 </details>
-
-## メディア掲載
-
-### 人流センシングによる都市環境モニタリング
-- **掲載メディア**: 日経テクノロジーオンライン
-- **掲載日**: 2018年
-- **概要**: 商業施設や公共空間での人の流れを測域センサーとIoTデバイスで計測・分析する研究について特集。人の動きのモデル化と、それを活用した混雑予測やスマートシティへの応用可能性が解説されました。
-- **関連研究**: [人の動きがシステムの性能に与える影響の把握、及び人の動きを考慮したシステム設計](https://doi.org/10.1587/nolta.10.209)
-
-### ウェアラブルデバイスを活用した生活支援研究
-- **掲載メディア**: 大阪大学研究レポート
-- **掲載日**: 2016年
-- **概要**: 未来シティ研究所の「#27 未来のシューズ」プロジェクトの一環として、靴型センサーを用いた歩行状態推定と転倒予測技術の研究が紹介されました。高齢者の見守りや安全な歩行支援を目的とした技術開発について解説しています。
-- **関連研究**: [靴型ウェアラブルセンサによる通行路状況推定手法の提案](https://doi.org/10.1587/transcom.2015IBP0003)
-
-### 電子トリアージシステムの開発
-- **掲載メディア**: JSTニュース
-- **掲載日**: 2010年
-- **概要**: 災害現場での迅速な傷病者の重症度判定（トリアージ）と情報共有を可能にする電子トリアージシステムの研究開発について紹介されました。このシステムは無線センサネットワークを活用し、傷病者の状態をリアルタイムに把握・共有することで、限られた医療資源の効率的な配分を支援します。
-- **関連研究**: [災害時救急救命支援に向けた電子トリアージシステムの設計開発](https://doi.org/10.2197/ipsjjip.18.760)
 

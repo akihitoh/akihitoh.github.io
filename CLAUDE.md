@@ -35,7 +35,6 @@ git push origin main
 - `works.md` — Full publication list（学術論文誌、国際会議、国内会議の3セクション）
 - `software.md` — Software tools and datasets
 - `funds.md` — Research funding history（研究代表者/分担者の2セクション）
-- `media.md` — Media coverage and interviews
 
 **Legacy Files** (`homepage/`):
 - 旧サイトの HTML、BibTeX パーサー（`rbib/`）、Bootstrap テンプレート等
