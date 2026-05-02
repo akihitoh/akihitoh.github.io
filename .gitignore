@@ -22,3 +22,8 @@ Thumbs.db
 
 
 homepage/
+
+# Local working directories
+.claude/
+.letta/
+plans/
