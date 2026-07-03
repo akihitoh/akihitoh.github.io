@@ -1,0 +1,25 @@
+---
+layout: default
+title: 研究業績一覧
+---
+<div class="page-title">
+  <div class="eyebrow">Publications</div>
+  <h1>研究業績一覧</h1>
+  <p>学術論文誌・国際会議・国内会議</p>
+</div>
+
+<div class="pub-toolbar">
+  <div class="inner">
+    <div class="pub-chips" id="pubChips"></div>
+    <div class="pub-tools">
+      <div class="pub-search"><span class="ic">⌕</span><input id="pubSearch" placeholder="キーワード・著者・年で検索"></div>
+      <button class="mini-btn" id="pubExpand">すべて展開</button>
+      <button class="mini-btn" id="pubCollapse">折りたたむ</button>
+    </div>
+  </div>
+</div>
+
+<div class="pub-main" id="pubMain"></div>
+
+<script src="{{ "/assets/js/publications-data.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/works.js" | relative_url }}"></script>

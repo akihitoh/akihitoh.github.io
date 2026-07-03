@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- HEADER (ja) -->
+<header class="site-header"><nav class="nav">
+  <a class="brand" href="#"><span class="brand-jp">廣森 聡仁</span><span class="brand-en">Akihito Hiromori</span></a>
+  <div class="nav-links">
+    <a href="#themes">研究テーマ</a>
+    <a href="#" class="active">業績</a>
+    <a href="#">研究資金</a>
+    <a href="#contact">連絡先</a>
+    <a class="pill" href="#">EN</a>
+  </div>
+</nav></header>
+
+<!-- HOME hero -->
+<section class="hero">
+  <div>
+    <div class="eyebrow with-rule"><span class="rule"></span>Osaka University · D3 Center</div>
+    <h1>廣森 聡仁</h1>
+    <div class="sub">Akihito Hiromori, Ph.D.</div>
+    <div class="titles">
+      <div>大阪大学 D3センター <strong>准教授</strong></div>
+      <div class="dim">大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授</div>
+    </div>
+    <p class="lede">シミュレーションのサロゲートモデル、スマートシティ最適化、3次元センシング、耐災害ネットワークを軸に、<strong>人の動きを考慮した情報システム</strong>の設計・評価を研究しています。</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#">研究業績を見る <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#themes">研究テーマ</a>
+    </div>
+  </div>
+  <aside>
+    <div class="portrait"><div class="frame"></div><div class="pic"><img src="../assets/img/hiromori.png" alt=""></div></div>
+    <dl class="facts">
+      <div class="row"><dt>Field</dt><dd>情報ネットワーク学<br>モバイルコンピューティング</dd></div>
+      <div class="row"><dt>Degree</dt><dd>博士(工学)<br><span class="dim">大阪大学, 2004</span></dd></div>
+      <div class="row"><dt>Since</dt><dd>2008 大阪大学</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<!-- themes -->
+<section id="themes" class="band tint"><div class="inner">
+  <div class="band-head">
+    <div><div class="eyebrow">Research</div><h2>研究テーマ</h2></div>
+    <p class="desc">実世界の人・車両・環境をセンシングし、シミュレーションと最適化・機械学習で結ぶ8つの領域に取り組んでいます。</p>
+  </div>
+  <div class="theme-grid" id="themeGrid"></div>
+</div></section>
+
+<!-- contact -->
+<section id="contact" class="band"><div class="inner">
+  <div class="band-head" style="margin-bottom:48px;"><div><div class="eyebrow">Contact</div><h2>連絡先・リンク</h2></div></div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-label">Email</div>
+      <div class="email">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</div>
+      <p class="contact-note">迷惑メール対策のため <strong>[at]</strong> を <strong>@</strong> に置き換えてご連絡ください。</p>
+    </div>
+    <div class="link-list">
+      <a href="#"><span><span class="l-title">研究者情報 (researchmap / NII)</span><span class="l-sub">研究者番号 90506544</span></span><span class="l-arr">↗</span></a>
+      <a href="#"><span><span class="l-title">科研費データベース (KAKENHI)</span><span class="l-sub">研究課題・獲得研究費</span></span><span class="l-arr">↗</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- WORKS -->
+<div class="page-title"><div class="eyebrow">Publications</div><h1>研究業績一覧</h1><p>学術論文誌・国際会議・国内会議</p></div>
+<div class="pub-toolbar"><div class="inner">
+  <div class="pub-chips" id="pubChips"></div>
+  <div class="pub-tools">
+    <div class="pub-search"><span class="ic">⌕</span><input id="pubSearch" placeholder="キーワード・著者・年で検索"></div>
+    <button class="mini-btn" id="pubExpand">すべて展開</button>
+    <button class="mini-btn" id="pubCollapse">折りたたむ</button>
+  </div>
+</div></div>
+<div class="pub-main" id="pubMain"></div>
+
+<!-- FUNDS sample -->
+<div class="page-title"><div class="eyebrow">Funding</div><h1>外部研究資金</h1></div>
+<main class="pub-main" style="padding-top:12px;">
+  <section style="margin-bottom:40px;">
+    <div class="section-head"><h2>研究代表者</h2><span class="en">Principal Investigator</span><span class="count">5件</span></div>
+    <div class="fund-list">
+      <a class="fund-card presto" href="#"><div class="top"><span class="fund-tag presto">JST さきがけ</span><span class="years">2020 – 2024</span></div><h3>測域センサを搭載した複数UAVによる共通IoTセンシング基盤</h3><div class="meta"><span>研究種目 <strong>さきがけ（IoTが拓く未来）</strong></span><span>課題番号 <strong>JPMJPR2037</strong></span></div></a>
+      <a class="fund-card" href="#"><div class="top"><span class="fund-tag">科研費 基盤研究(C)</span><span class="years">2021 – 2023</span></div><h3>研究大学における学生の教育・研究活動の包括的分析</h3><div class="meta"><span>研究種目 <strong>基盤研究(C)</strong></span><span>課題番号 <strong>21K02632</strong></span></div></a>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>研究分担者</h2><span class="en">Co-Investigator</span><span class="count">8件</span></div>
+    <div class="fund-grid">
+      <a class="fund-mini" href="#"><div class="top"><span class="tag">基盤研究(S)</span><span class="years">2019 – 2023</span></div><h3>受動型IoTデバイス網を用いたヒト・モノの状況認識技術の創出</h3><div class="pi">研究代表者 <strong>東野 輝夫</strong> ・ 課題番号 19H05665</div></a>
+      <a class="fund-mini" href="#"><div class="top"><span class="tag">基盤研究(B)</span><span class="years">2019 – 2022</span></div><h3>実世界データストリームの高次理解に基づくサイバー空間モビリティ構築技術</h3><div class="pi">研究代表者 <strong>山口 弘純</strong> ・ 課題番号 19H04095</div></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  <a class="f-name" href="#">廣森 聡仁 <span class="en-dim">Akihito Hiromori</span></a>
+  <div class="copy">© 2026 Akihito Hiromori · Osaka University D3 Center</div>
+</div></footer>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1F3A56"/><text x="50" y="62" font-family="serif" font-size="42" fill="#F6F4EF" text-anchor="middle">廣</text></svg></template>
+
+<script>
+  // render themes (mirror of _data/research.yml, ja)
+  var THEMES = [
+    ["01","シミュレーションのサロゲートモデル","Neural Surrogate Models",["歩行者流制御の最適化","自動運転通信の性能評価","電波伝搬マップ","衛星フェーズドアレイ"]],
+    ["02","スマートシティ向け最適化とサービス実装","Smart-City Optimization & Services",["避難経路計画 (LP・Transformer)","介護タクシー配車","Pub/Sub IoT配信"]],
+    ["03","3次元点群・UAVを用いた空間/人物センシング","3D Point Cloud & UAV Sensing",["高密度群衆トラッキング","UAV点群からの建物認識","ミリ波レーダー人物検出"]],
+    ["04","車両・交通センシングと安全支援","Vehicular & Traffic Sensing",["危険交通状況の検出","高速道路合流点予測","車線交通量抽出"]],
+    ["05","緊急・耐災害ネットワーク","Disaster-Resilient Networking",["LoRa緊急網スケジューリング","災害時情報集約基盤","電子トリアージ"]],
+    ["06","大規模ネットワーク解析・シミュレーション","Large-Scale Network Analysis",["Network Calculus 遅延評価","無線相互干渉調停","路側機/基地局群の制御"]],
+    ["07","スマート建物・人の行動に基づくエネルギー制御","Human-Aware Building Energy",["生活ノウハウのモデル化","温熱快適性空調制御","タスク/アンビエント照明"]],
+    ["08","人の動きを考慮したシステム設計","Mobility-Aware System Design",["人流・歩行者トラッキング","モビリティモデル","群衆センシング"]]
+  ];
+  document.getElementById("themeGrid").innerHTML = THEMES.map(function(t){
+    return '<article class="theme-card"><div class="card-inner"><span class="num">'+t[0]+'</span><div>'+
+      '<h3>'+t[1]+'</h3><div class="en-label">'+t[2]+'</div><div class="tags">'+
+      t[3].map(function(x){return '<span class="tag">'+x+'</span>';}).join("")+'</div></div></div></article>';
+  }).join("");
+</script>
+<script src="../assets/js/publications-data.js"></script>
+<script src="../assets/js/works.js"></script>
+</body>
+</html>

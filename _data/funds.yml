@@ -1,0 +1,52 @@
+# 外部研究資金
+# pi = 研究代表者 / co = 研究分担者
+pi:
+  - tag: "JST さきがけ"
+    presto: true
+    years: "2020 – 2024"
+    title: "測域センサを搭載した複数UAVによる共通IoTセンシング基盤"
+    url: "https://www.jst.go.jp/kisoken/presto/project/1112092/1112092_2020.html"
+    meta:
+      - { k: "研究種目", v: "さきがけ（IoTが拓く未来）" }
+      - { k: "課題番号", v: "JPMJPR2037" }
+  - tag: "科研費 基盤研究(C)"
+    years: "2021 – 2023"
+    title: "研究大学における学生の教育・研究活動の包括的分析"
+    url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21K02632/"
+    meta:
+      - { k: "研究種目", v: "基盤研究(C)" }
+      - { k: "課題番号", v: "21K02632" }
+  - tag: "科研費 挑戦的萌芽研究"
+    years: "2015 – 2017"
+    title: "数理的な移動軌跡モデルに基づく広域交通流の推定手法"
+    url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-15K12153/"
+    meta:
+      - { k: "研究種目", v: "挑戦的萌芽研究" }
+      - { k: "研究分野", v: "ウェブ情報学・サービス情報学" }
+      - { k: "課題番号", v: "15K12153" }
+  - tag: "科研費 若手研究(A)"
+    years: "2012 – 2015"
+    title: "モビリティの影響を網羅的かつ定性的に試験するネットワークシステム性能評価手法"
+    url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24680007/"
+    meta:
+      - { k: "研究種目", v: "若手研究(A)" }
+      - { k: "研究分野", v: "計算機システム・ネットワーク" }
+      - { k: "課題番号", v: "24680007" }
+  - tag: "科研費 若手研究(B)"
+    years: "2009 – 2011"
+    title: "無線ネットワークシミュレーションを対象としたユーザモビリティモデルに関する研究"
+    url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21700076/"
+    meta:
+      - { k: "研究種目", v: "若手研究(B)" }
+      - { k: "研究分野", v: "計算機システム・ネットワーク" }
+      - { k: "課題番号", v: "21700076" }
+
+co:
+  - { tag: "基盤研究(S)", years: "2019 – 2023", title: "受動型IoTデバイス網を用いたヒト・モノの状況認識技術の創出", pi: "東野 輝夫", no: "19H05665", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19H05665/" }
+  - { tag: "基盤研究(B)", years: "2019 – 2022", title: "実世界データストリームの高次理解に基づくサイバー空間モビリティ構築技術", pi: "山口 弘純", no: "19H04095", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19H04095/" }
+  - { tag: "基盤研究(S)", years: "2014 – 2018", title: "人・車両・異種インフラのマイクロモジュール連携による超分散型時空間情報集約機構", pi: "東野 輝夫", no: "26220001", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26220001/" }
+  - { tag: "基盤研究(A)", years: "2014", title: "安全・安心な都市交通基盤構築を目指した次世代ITS通信網の開発", pi: "東野 輝夫", no: "26240009", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26240009/" }
+  - { tag: "基盤研究(A)", years: "2011 – 2013", title: "実空間・サイバー空間連携型ネットワーク・エミュレーション技術の開発", pi: "東野 輝夫", no: "23240009", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23240009/" }
+  - { tag: "特定領域研究", years: "2009 – 2010", title: "都市空間上での大規模モバイルワイヤレスネットワークにおける効率的な情報共有方式", pi: "東野 輝夫", no: "21013031", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21013031/" }
+  - { tag: "基盤研究(A)", years: "2008 – 2010", title: "大規模ユビキタスネットワークのリアルタイム・シミュレーション技術", pi: "東野 輝夫", no: "20240006", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-20240006/" }
+  - { tag: "特定領域研究", years: "2007 – 2008", title: "都市空間上での大規模モバイルワイヤレスネットワークにおける効率的な情報共有方式", pi: "東野 輝夫", no: "19024047", url: "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19024047/" }

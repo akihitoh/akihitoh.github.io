@@ -1,0 +1,50 @@
+# 研究テーマ（ホーム日本語 + About English で共用）
+# ja: 日本語タイトル / en: 英語ラベル / tags: 日本語タグ / en_desc: 英語説明文
+- num: "01"
+  ja: "シミュレーションのサロゲートモデル"
+  en: "Neural Surrogate Models"
+  tags: ["歩行者流制御の最適化", "自動運転通信の性能評価", "電波伝搬マップ", "衛星フェーズドアレイ"]
+  en_title: "Neural Surrogate Models for Simulation"
+  en_desc: "Pedestrian-flow policy optimization, autonomous-driving communication evaluation, radio-propagation maps, satellite phased-array coverage."
+- num: "02"
+  ja: "スマートシティ向け最適化とサービス実装"
+  en: "Smart-City Optimization & Services"
+  tags: ["避難経路計画 (LP・Transformer)", "介護タクシー配車", "Pub/Sub IoT配信"]
+  en_title: "Smart-City Optimization & Services"
+  en_desc: "Evacuation route planning (LP & Transformer), nursing-care taxi dispatch, Pub/Sub IoT message delivery."
+- num: "03"
+  ja: "3次元点群・UAVを用いた空間/人物センシング"
+  en: "3D Point Cloud & UAV Sensing"
+  tags: ["高密度群衆トラッキング", "UAV点群からの建物認識", "ミリ波レーダー人物検出"]
+  en_title: "3D Point Cloud & UAV Sensing"
+  en_desc: "Dense-crowd tracking & counting, building recognition from UAV point clouds, mmWave person detection under occlusion."
+- num: "04"
+  ja: "車両・交通センシングと安全支援"
+  en: "Vehicular & Traffic Sensing"
+  tags: ["危険交通状況の検出", "高速道路合流点予測", "車線交通量抽出"]
+  en_title: "Vehicular & Traffic Sensing"
+  en_desc: "Smartphone-based risky-situation detection, highway on-ramp merging prediction, lane-level traffic extraction."
+- num: "05"
+  ja: "緊急・耐災害ネットワーク"
+  en: "Disaster-Resilient Networking"
+  tags: ["LoRa緊急網スケジューリング", "災害時情報集約基盤", "電子トリアージ"]
+  en_title: "Disaster-Resilient Networking"
+  en_desc: "LoRa emergency-network scheduling, disaster communication & aggregation platforms, electronic triage systems."
+- num: "06"
+  ja: "大規模ネットワーク解析・シミュレーション"
+  en: "Large-Scale Network Analysis"
+  tags: ["Network Calculus 遅延評価", "無線相互干渉調停", "路側機/基地局群の制御"]
+  en_title: "Large-Scale Network Analysis"
+  en_desc: "Network-Calculus delay evaluation of in-vehicle networks, wireless interference coordination, RSU/base-station scheduling."
+- num: "07"
+  ja: "スマート建物・人の行動に基づくエネルギー制御"
+  en: "Human-Aware Building Energy"
+  tags: ["生活ノウハウのモデル化", "温熱快適性空調制御", "タスク/アンビエント照明"]
+  en_title: "Human-Aware Building Energy"
+  en_desc: "Modeling daily-living know-how, thermal-comfort-aware HVAC control, task/ambient lighting."
+- num: "08"
+  ja: "人の動きを考慮したシステム設計"
+  en: "Mobility-Aware System Design"
+  tags: ["人流・歩行者トラッキング", "モビリティモデル", "群衆センシング"]
+  en_title: "Mobility-Aware System Design"
+  en_desc: "Human/pedestrian tracking, mobility models, crowd sensing."

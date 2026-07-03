@@ -1,0 +1,53 @@
+---
+layout: default
+title: 外部研究資金
+---
+<div class="page-title">
+  <div class="eyebrow">Funding</div>
+  <h1>外部研究資金</h1>
+  <p>科研費・戦略的創造研究推進事業 (さきがけ) 等の獲得研究費。詳細は <a href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">科研費データベース ↗</a> をご参照ください。</p>
+</div>
+
+<main class="pub-main" style="padding-top:12px;">
+  <section style="margin-bottom:64px;">
+    <div class="section-head">
+      <h2>研究代表者</h2>
+      <span class="en">Principal Investigator</span>
+      <span class="count">{{ site.data.funds.pi | size }}件</span>
+    </div>
+    <div class="fund-list">
+      {%- for f in site.data.funds.pi -%}
+      <a class="fund-card{% if f.presto %} presto{% endif %}" href="{{ f.url }}" target="_blank" rel="noopener">
+        <div class="top">
+          <span class="fund-tag{% if f.presto %} presto{% endif %}">{{ f.tag }}</span>
+          <span class="years">{{ f.years }}</span>
+        </div>
+        <h3>{{ f.title }}</h3>
+        <div class="meta">
+          {%- for m in f.meta -%}<span>{{ m.k }} <strong>{{ m.v }}</strong></span>{%- endfor -%}
+        </div>
+      </a>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>研究分担者</h2>
+      <span class="en">Co-Investigator</span>
+      <span class="count">{{ site.data.funds.co | size }}件</span>
+    </div>
+    <div class="fund-grid">
+      {%- for f in site.data.funds.co -%}
+      <a class="fund-mini" href="{{ f.url }}" target="_blank" rel="noopener">
+        <div class="top">
+          <span class="tag">{{ f.tag }}</span>
+          <span class="years">{{ f.years }}</span>
+        </div>
+        <h3>{{ f.title }}</h3>
+        <div class="pi">研究代表者 <strong>{{ f.pi }}</strong> ・ 課題番号 {{ f.no }}</div>
+      </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</main>

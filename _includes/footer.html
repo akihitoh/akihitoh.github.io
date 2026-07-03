@@ -1,11 +1,10 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="social-links">
-    </div>
-
+<footer class="site-footer">
+  <div class="inner">
+    {%- if page.lang == 'en' -%}
+      <a class="f-name en" href="{{ "/about-en/" | relative_url }}">Akihito Hiromori</a>
+    {%- else -%}
+      <a class="f-name" href="{{ "/" | relative_url }}">廣森 聡仁 <span class="en-dim">Akihito Hiromori</span></a>
+    {%- endif -%}
+    <div class="copy">© {{ site.time | date: "%Y" }} Akihito Hiromori · Osaka University D3 Center</div>
   </div>
-
 </footer>

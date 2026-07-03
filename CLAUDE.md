@@ -22,32 +22,32 @@ git push origin main
 
 ## Site Architecture
 
-**Navigation の二重管理に注意**:
-- `_config.yml` の `header_pages` — minima テーマのヘッダーリンク順序を制御
-- `_data/navigation.yml` — カスタムナビゲーション構造を定義
+カスタムデザイン（minima を `_layouts/`・`_includes/` で全面上書き）。ページ本体は薄い front matter のみで、実体はレイアウトとデータファイルに分離されている。
 
-新しいページを追加する場合は**両方**を更新する必要がある。
+**Navigation**: `_includes/header.html` に直接定義（日本語/英語で分岐）。`_config.yml` の `header_pages` はテーマ側フォールバックとして残置、`_data/navigation.yml` は未使用。
 
-**Content Pages**:
-- `README.md` — Profile homepage（略歴、職歴、学歴、研究テーマ、連絡先）
-- `about-en.md` — English profile page（ヘッダーには非表示、README.md からリンク）
-- `projects.md` — Research projects with KAKENHI details
-- `works.md` — Full publication list（学術論文誌、国際会議、国内会議の3セクション）
-- `software.md` — Software tools and datasets
-- `funds.md` — Research funding history（研究代表者/分担者の2セクション）
+**Content Pages**（front matter のみ。実体は対応する layout）:
+- `index.html` — トップページ（`layout: home`。研究テーマは `_data/research.yml`）
+- `works.html` → `/works/` — 業績一覧（`layout: works`。データは `assets/js/publications-data.js`、描画は `assets/js/works.js`）
+- `funds.html` → `/funds/` — 研究資金（`layout: funds`。データは `_data/funds.yml` の `pi`/`co`）
+- `about-en.html` → `/about-en/` — English profile（`layout: about-en`。データは `_data/cv.yml` と `_data/research.yml`）
 
-**Legacy Files** (`homepage/`):
-- 旧サイトの HTML、BibTeX パーサー（`rbib/`）、Bootstrap テンプレート等
-- 参照用のアーカイブ。通常は編集不要
+**Data Files** (`_data/`):
+- `research.yml` — 研究テーマ（ホーム日本語 + About English で共用）
+- `funds.yml` — 研究資金（`pi`: 研究代表者 / `co`: 研究分担者）
+- `cv.yml` — 英語版 CV（appointments / education）
 
-**HTML Templates** (unused/draft):
-- `publication.html`, `published_papers.html`, `presentations.html`
+**Non-published Files**:
+- `README.md` — リポジトリ説明用（`exclude` 済み、サイトには出ない）
+- `SETUP.md` — デザイン反映手順メモ（`exclude` 済み）
+- `_preview/` — デザインプレビュー（アンダースコア始まりのため非公開）
+- `homepage/` — 旧サイトのアーカイブ（`exclude` 済み。通常は編集不要）
 
 ## Content Guidelines
 
 - Primary language: Japanese（技術用語は英語のまま）
-- Publication entries in `works.md`: 番号付きリスト、新しいものを先頭に追加
+- 業績の追加は `assets/js/publications-data.js` の該当カテゴリ（journal / international / domestic）の該当 era グループ先頭に追加
   - 日本語論文: `著者, "タイトル", 論文誌名, Vol.XX, No.X, pp.XX-XX, 年月.`
   - 英語論文: `Authors, "Title", Conference/Journal, pp.XX-XX, Month Year.`
-- Research funding entries in `funds.md`: KAKENHI 課題番号と kaken.nii.ac.jp リンクを含める
+- 研究資金の追加は `_data/funds.yml`: KAKENHI 課題番号と kaken.nii.ac.jp リンクを含める
 - Contact email uses "atmark" instead of "@" for spam prevention

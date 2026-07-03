@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<section class="hero">
+  <div>
+    <div class="eyebrow with-rule"><span class="rule"></span>Osaka University · D3 Center</div>
+    <h1>廣森 聡仁</h1>
+    <div class="sub">Akihito Hiromori, Ph.D.</div>
+    <div class="titles">
+      <div>大阪大学 D3センター <strong>准教授</strong></div>
+      <div class="dim">大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授</div>
+    </div>
+    <p class="lede">
+      シミュレーションのサロゲートモデル、スマートシティ最適化、3次元センシング、耐災害ネットワークを軸に、<strong>人の動きを考慮した情報システム</strong>の設計・評価を研究しています。
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">研究業績を見る <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#themes">研究テーマ</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="portrait">
+      <div class="frame"></div>
+      <div class="pic"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="廣森 聡仁"></div>
+    </div>
+    <dl class="facts">
+      <div class="row"><dt>Field</dt><dd>情報ネットワーク学<br>モバイルコンピューティング</dd></div>
+      <div class="row"><dt>Degree</dt><dd>博士(工学)<br><span class="dim">大阪大学, 2004</span></dd></div>
+      <div class="row"><dt>Since</dt><dd>2008 大阪大学</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section id="themes" class="band tint">
+  <div class="inner">
+    <div class="band-head">
+      <div>
+        <div class="eyebrow">Research</div>
+        <h2>研究テーマ</h2>
+      </div>
+      <p class="desc">実世界の人・車両・環境をセンシングし、シミュレーションと最適化・機械学習で結ぶ8つの領域に取り組んでいます。</p>
+    </div>
+    <div class="theme-grid">
+      {%- for t in site.data.research -%}
+      <article class="theme-card">
+        <div class="card-inner">
+          <span class="num">{{ t.num }}</span>
+          <div>
+            <h3>{{ t.ja }}</h3>
+            <div class="en-label">{{ t.en }}</div>
+            <div class="tags">
+              {%- for tag in t.tags -%}<span class="tag">{{ tag }}</span>{%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="band">
+  <div class="inner">
+    <div class="band-head" style="margin-bottom:48px;">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>連絡先・リンク</h2>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="email">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</div>
+        <p class="contact-note">迷惑メール対策のため <strong>[at]</strong> を <strong>@</strong> に置き換えてご連絡ください。</p>
+      </div>
+      <div class="link-list">
+        <a href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">
+          <span><span class="l-title">研究者情報 (researchmap / NII)</span><span class="l-sub">研究者番号 90506544</span></span>
+          <span class="l-arr">↗</span>
+        </a>
+        <a href="https://kaken.nii.ac.jp/ja/search/?qm=%E5%BB%A3%E6%A3%AE%E8%81%A1%E4%BB%81" target="_blank" rel="noopener">
+          <span><span class="l-title">科研費データベース (KAKENHI)</span><span class="l-sub">研究課題・獲得研究費</span></span>
+          <span class="l-arr">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

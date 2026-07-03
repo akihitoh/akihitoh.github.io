@@ -1,0 +1,13 @@
+# About (English) — CV data
+appointments:
+  - { when: "Oct 2024", what: "Associate Professor, D3 Center, Osaka University", recent: true }
+  - { when: "Apr 2022", what: "Associate Professor, Information Promotion Division" }
+  - { when: "Apr 2016", what: "Associate Professor, Office of Management and Planning" }
+  - { when: "Apr 2014", what: "Lecturer, Institute for Academic Initiatives" }
+  - { when: "Apr 2008", what: "Assistant Professor, Graduate School of Information Science and Technology" }
+  - { when: "Jul 2005", what: "NTT DOCOMO, Network / Research Laboratories" }
+  - { when: "Apr 2003", what: "JSPS Research Fellow (until Mar 2005)" }
+education:
+  - { when: "Mar 2004", what: "Ph.D. (Engineering), Graduate School of Engineering Science, Osaka University", recent: true }
+  - { when: "Mar 2001", what: "M.Eng., Division of Information and Mathematical Science" }
+  - { when: "Mar 1999", what: "School of Engineering Science, Dept. of Information Science (advanced early to graduate school)" }

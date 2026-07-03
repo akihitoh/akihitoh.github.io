@@ -2,20 +2,26 @@ remote_theme: jekyll/minima
 
 plugins:
   - jekyll-remote-theme
-#theme: jekyll-theme-minima
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 title: 廣森 聡仁 (Akihito Hiromori)
-description: ""
+description: "大阪大学 D3センター 准教授 廣森聡仁の研究紹介・業績・研究資金。"
+lang: ja
 show_downloads: false
 
-# MinimaのHeader Linksを使用
+# ナビゲーションは _includes/header.html で独自定義（minima の header_pages は未使用）
+# header_pages はテーマ側のフォールバックとして残置
 header_pages:
-  - works.md
-  - funds.md
-  - about-en.md
+  - works.html
+  - funds.html
+  - about-en.html
 
 # Jekyllビルドから除外
 exclude:
   - CLAUDE.md
+  - README.md
+  - SETUP.md
   - plans/
   - homepage/
   - Gemfile

@@ -1,0 +1,85 @@
+---
+layout: default
+lang: en
+title: About
+---
+<section class="hero en">
+  <div>
+    <div class="eyebrow with-rule"><span class="rule"></span>Osaka University · D3 Center</div>
+    <h1>Akihito<br>Hiromori</h1>
+    <div class="sub">廣森 聡仁 &nbsp;·&nbsp; Ph.D. (Engineering)</div>
+    <div class="titles">
+      <div><strong>Associate Professor</strong>, D3 Center, Osaka University</div>
+      <div class="dim">Associate Professor (concurrent), Dept. of Information Networking, Graduate School of Information Science and Technology</div>
+    </div>
+    <p class="lede">
+      My research connects real-world sensing of people, vehicles and environments with <strong>simulation, optimization and machine learning</strong> — from neural surrogate models to disaster-resilient networking and mobility-aware system design.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">View publications <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">researchmap ↗</a>
+    </div>
+  </div>
+
+  <aside>
+    <div class="portrait">
+      <div class="frame"></div>
+      <div class="pic"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="Akihito Hiromori"></div>
+    </div>
+    <dl class="facts">
+      <div class="row"><dt>Field</dt><dd>Information Networking<br>Mobile Computing</dd></div>
+      <div class="row"><dt>Email</dt><dd style="font-size:13.5px;">hiromori<span style="color:var(--rust);">[at]</span>ist.osaka-u.ac.jp</dd></div>
+      <div class="row"><dt>Since</dt><dd>2008 · Osaka Univ.</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section id="research" class="band tint">
+  <div class="inner">
+    <div class="band-head en" style="margin-bottom:48px;">
+      <div>
+        <div class="eyebrow">Research Interests</div>
+        <h2>Eight interlocking areas</h2>
+      </div>
+    </div>
+    <div class="theme-grid en">
+      {%- for t in site.data.research -%}
+      <article class="theme-card">
+        <span class="num">{{ t.num }}</span>
+        <h3>{{ t.en_title }}</h3>
+        <p>{{ t.en_desc }}</p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="band">
+  <div class="inner">
+    <div class="cv-grid">
+      <div class="cv-block">
+        <div class="eyebrow">Career</div>
+        <h2>Appointments</h2>
+        {%- for a in site.data.cv.appointments -%}
+        <div class="cv-line{% if a.recent %} recent{% endif %}"><span class="when">{{ a.when }}</span><span class="what">{{ a.what }}</span></div>
+        {%- endfor -%}
+      </div>
+      <div class="cv-block">
+        <div class="eyebrow">Education</div>
+        <h2>Degrees</h2>
+        {%- for e in site.data.cv.education -%}
+        <div class="cv-line{% if e.recent %} recent{% endif %}"><span class="when">{{ e.when }}</span><span class="what">{{ e.what }}</span></div>
+        {%- endfor -%}
+
+        <div class="cv-links">
+          <div class="contact-label">Links</div>
+          <div class="rows">
+            <a href="{{ "/works/" | relative_url }}">Publications <span>→</span></a>
+            <a href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">researchmap / NII <span>↗</span></a>
+            <a href="{{ "/funds/" | relative_url }}">Research funding <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
