@@ -22,12 +22,12 @@ git push origin main
 
 ## Site Architecture
 
-カスタムデザイン（minima を `_layouts/`・`_includes/` で全面上書き）。ページ本体は薄い front matter のみで、実体はレイアウトとデータファイルに分離されている。
+カスタムデザイン（minima を `_layouts/`・`_includes/` で全面上書き）。スタイルは `assets/css/site.css`（`style.css` は minima の `style.scss` と出力先が衝突するため使わない）。ページ本体は薄い front matter のみで、実体はレイアウトとデータファイルに分離されている。
 
 **Navigation**: `_includes/header.html` に直接定義（日本語/英語で分岐）。`_config.yml` の `header_pages` はテーマ側フォールバックとして残置、`_data/navigation.yml` は未使用。
 
 **Content Pages**（front matter のみ。実体は対応する layout）:
-- `index.html` — トップページ（`layout: home`。研究テーマは `_data/research.yml`）
+- `index.html` — トップページ（`layout: home`。研究テーマは `_data/research.yml`、略歴は `_data/cv.yml`）
 - `works.html` → `/works/` — 業績一覧（`layout: works`。データは `assets/js/publications-data.js`、描画は `assets/js/works.js`）
 - `funds.html` → `/funds/` — 研究資金（`layout: funds`。データは `_data/funds.yml` の `pi`/`co`）
 - `about-en.html` → `/about-en/` — English profile（`layout: about-en`。データは `_data/cv.yml` と `_data/research.yml`）
@@ -35,7 +35,8 @@ git push origin main
 **Data Files** (`_data/`):
 - `research.yml` — 研究テーマ（ホーム日本語 + About English で共用）
 - `funds.yml` — 研究資金（`pi`: 研究代表者 / `co`: 研究分担者）
-- `cv.yml` — 英語版 CV（appointments / education）
+- `cv.yml` — 略歴（appointments / education。日本語 `ja_when`/`ja` はホームの「略歴」、英語 `when`/`en` は About English で共用）
+- `activities.yml` — 受賞・学会活動（委員歴）・所属学会・特許・メディア報道（ホームの「略歴・活動」で表示。researchmap と同期）
 
 **Non-published Files**:
 - `README.md` — リポジトリ説明用（`exclude` 済み、サイトには出ない）

@@ -5,6 +5,8 @@
     {%- else -%}
       <a class="f-name" href="{{ "/" | relative_url }}">廣森 聡仁 <span class="en-dim">Akihito Hiromori</span></a>
     {%- endif -%}
-    <div class="copy">© {{ site.time | date: "%Y" }} Akihito Hiromori · D3 Center, The University of Osaka</div>
+    <div class="copy">
+      {%- if page.lang == 'en' -%}Last updated {{ site.time | date: "%B %-d, %Y" }}{%- else -%}最終更新 {{ site.time | date: "%Y年%-m月%-d日" }}{%- endif -%}
+      <span class="sep">·</span>© {{ site.time | date: "%Y" }} Akihito Hiromori</div>
   </div>
 </footer>

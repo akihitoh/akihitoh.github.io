@@ -11,11 +11,11 @@ layout: default
       <div class="dim">大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授</div>
     </div>
     <p class="lede">
-      シミュレーションのサロゲートモデル、スマートシティ最適化、3次元センシング、耐災害ネットワークを軸に、<strong>人の動きを考慮した情報システム</strong>の設計・評価を研究しています。
+      人・車両・環境の実世界センシングと、シミュレーション・最適化・機械学習を組み合わせ、<strong>人の動きを考慮した情報システム</strong>の設計と評価に取り組んでいます。近年はニューラルサロゲートによるシミュレーションの高速化、スマートシティにおける最適化、3次元点群センシング、災害時に強いネットワークを中心に研究しています。
     </p>
     <div class="cta">
       <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">研究業績を見る <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#themes">研究テーマ</a>
+      <a class="btn btn-ghost" href="#cv">略歴</a>
     </div>
   </div>
 
@@ -25,9 +25,9 @@ layout: default
       <div class="pic"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="廣森 聡仁"></div>
     </div>
     <dl class="facts">
-      <div class="row"><dt>Field</dt><dd>情報ネットワーク学<br>モバイルコンピューティング</dd></div>
-      <div class="row"><dt>Degree</dt><dd>博士(工学)<br><span class="dim">大阪大学, 2004</span></dd></div>
-      <div class="row"><dt>Since</dt><dd>2008 大阪大学</dd></div>
+      <div class="row"><dt>専門分野</dt><dd>情報ネットワーク学<br>モバイルコンピューティング</dd></div>
+      <div class="row"><dt>学位</dt><dd>博士(工学)<br><span class="dim">大阪大学・2004年3月</span></dd></div>
+      <div class="row"><dt>在籍</dt><dd>大阪大学（2008年4月〜）</dd></div>
     </dl>
   </aside>
 </section>
@@ -39,7 +39,7 @@ layout: default
         <div class="eyebrow">Research</div>
         <h2>研究テーマ</h2>
       </div>
-      <p class="desc">実世界の人・車両・環境をセンシングし、シミュレーションと最適化・機械学習で結ぶ8つの領域に取り組んでいます。</p>
+      <p class="desc">実世界のセンシングと、シミュレーション・最適化・機械学習をつなぐ8つのテーマに取り組んでいます。</p>
     </div>
     <div class="theme-grid">
       {%- for t in site.data.research -%}
@@ -60,9 +60,64 @@ layout: default
   </div>
 </section>
 
-<section id="contact" class="band">
+<section id="cv" class="band">
   <div class="inner">
-    <div class="band-head" style="margin-bottom:48px;">
+    <div class="band-head">
+      <div>
+        <div class="eyebrow">Career</div>
+        <h2>略歴・活動</h2>
+      </div>
+    </div>
+    <div class="cv-grid">
+      <div class="cv-block">
+        <h3 class="cv-title">職歴</h3>
+        {%- for a in site.data.cv.appointments -%}
+        <div class="cv-line{% if a.current %} recent{% endif %}"><span class="when">{{ a.ja_when }}</span><span class="what">{{ a.ja }}</span></div>
+        {%- endfor -%}
+      </div>
+      <div class="cv-block">
+        <h3 class="cv-title">学歴・学位</h3>
+        {%- for e in site.data.cv.education -%}
+        <div class="cv-line{% if e.current %} recent{% endif %}"><span class="when">{{ e.ja_when }}</span><span class="what">{{ e.ja }}</span></div>
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- assign act = site.data.activities -%}
+    <div class="cv-grid cv-more">
+      <div class="cv-block">
+        <h3 class="cv-title">受賞</h3>
+        {%- for a in act.awards -%}
+        <div class="cv-line"><span class="when">{{ a.when }}</span><span class="what">{{ a.org }} {{ a.title }}{% if a.note %}<span class="sub">{{ a.note }}</span>{% endif %}</span></div>
+        {%- endfor -%}
+
+        <h3 class="cv-title">特許</h3>
+        {%- for p in act.patents -%}
+        <div class="cv-line"><span class="when">{{ p.when }}</span><span class="what">{{ p.title }}<span class="sub">{{ p.number }}・出願人 {{ p.applicant }}</span></span></div>
+        {%- endfor -%}
+
+        <h3 class="cv-title">メディア報道</h3>
+        {%- for m in act.media -%}
+        <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}<span class="sub">{{ m.org }}</span></span></div>
+        {%- endfor -%}
+      </div>
+      <div class="cv-block">
+        <h3 class="cv-title">学会活動</h3>
+        {%- for c in act.committees -%}
+        <div class="cv-line"><span class="when">{{ c.when }}</span><span class="what">{{ c.org }} {{ c.title }}</span></div>
+        {%- endfor -%}
+
+        <h3 class="cv-title">所属学会</h3>
+        {%- for m in act.memberships -%}
+        <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}</span></div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="band tint">
+  <div class="inner">
+    <div class="band-head">
       <div>
         <div class="eyebrow">Contact</div>
         <h2>連絡先・リンク</h2>
@@ -72,15 +127,15 @@ layout: default
       <div>
         <div class="contact-label">Email</div>
         <div class="email">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</div>
-        <p class="contact-note">迷惑メール対策のため <strong>[at]</strong> を <strong>@</strong> に置き換えてご連絡ください。</p>
+        <p class="contact-note">迷惑メール対策のため表記を変えています。<strong>[at]</strong> を <strong>@</strong> に置き換えて送信してください。</p>
       </div>
       <div class="link-list">
         <a href="https://researchmap.jp/ahiromori" target="_blank" rel="noopener">
-          <span><span class="l-title">研究者情報 (researchmap)</span><span class="l-sub">経歴・研究業績プロフィール</span></span>
+          <span><span class="l-title">研究者情報 (researchmap)</span><span class="l-sub">経歴・業績・社会貢献活動の一覧</span></span>
           <span class="l-arr">↗</span>
         </a>
         <a href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">
-          <span><span class="l-title">科研費データベース (KAKEN)</span><span class="l-sub">研究者番号 90506544 · 研究課題・獲得研究費</span></span>
+          <span><span class="l-title">科研費データベース (KAKEN)</span><span class="l-sub">研究者番号 90506544・研究課題と成果報告</span></span>
           <span class="l-arr">↗</span>
         </a>
       </div>

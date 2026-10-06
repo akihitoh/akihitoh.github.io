@@ -27,7 +27,7 @@ jekyll/_data/research.yml     → _data/research.yml
 jekyll/_data/funds.yml        → _data/funds.yml
 jekyll/_data/cv.yml           → _data/cv.yml
 
-jekyll/assets/css/style.css              → assets/css/style.css
+jekyll/assets/css/style.css              → assets/css/site.css
 jekyll/assets/js/publications-data.js    → assets/js/publications-data.js
 jekyll/assets/js/works.js                → assets/js/works.js
 jekyll/assets/img/hiromori.png           → assets/img/hiromori.png   （既存と同じ）
@@ -65,5 +65,5 @@ git push origin main       # GitHub Pages が自動ビルド → https://akihito
 
 ## 補足
 - フォントは Google Fonts（Zen Old Mincho / Zen Kaku Gothic New / Newsreader）を `_includes/head.html` で読込。
-- 配色・余白・コンポーネントは全て `assets/css/style.css` 冒頭の `:root` 変数で一元管理。
+- 配色・余白・コンポーネントは全て `assets/css/site.css` 冒頭の `:root` 変数で一元管理。
 - minima 本体は撤去していません。SEO(`jekyll-seo-tag`)・sitemap 等の下回りはそのまま活用します。

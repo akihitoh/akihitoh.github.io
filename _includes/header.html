@@ -6,7 +6,7 @@
         <span class="brand-jp">Akihito Hiromori</span>
         <span class="brand-en">The University of Osaka</span>
       </a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')"><span></span></button>
+      <button class="nav-toggle" aria-label="Menu" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
         <a href="{{ "/about-en/" | relative_url }}#research">Research</a>
         <a href="{{ "/works/" | relative_url }}"{% if p contains 'works' %} class="active"{% endif %}>Publications</a>
@@ -18,9 +18,10 @@
         <span class="brand-jp">廣森 聡仁</span>
         <span class="brand-en">Akihito Hiromori</span>
       </a>
-      <button class="nav-toggle" aria-label="メニュー" onclick="document.getElementById('navlinks').classList.toggle('open')"><span></span></button>
+      <button class="nav-toggle" aria-label="メニュー" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
         <a href="{{ "/" | relative_url }}#themes">研究テーマ</a>
+        <a href="{{ "/" | relative_url }}#cv">略歴</a>
         <a href="{{ "/works/" | relative_url }}"{% if p contains 'works' %} class="active"{% endif %}>業績</a>
         <a href="{{ "/funds/" | relative_url }}"{% if p contains 'funds' %} class="active"{% endif %}>研究資金</a>
         <a href="{{ "/" | relative_url }}#contact">連絡先</a>

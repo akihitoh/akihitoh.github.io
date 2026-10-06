@@ -1,13 +1,18 @@
-# About (English) — CV data
+# 略歴データ（ホーム日本語「略歴」+ About English「CV」で共用）
+# ja_when / ja: 日本語表記, when / en: 英語表記, current: 現職
 appointments:
-  - { when: "Oct 2024", what: "Associate Professor, D3 Center, The University of Osaka", recent: true }
-  - { when: "Apr 2022", what: "Associate Professor, Information Promotion Division" }
-  - { when: "Apr 2016", what: "Associate Professor, Office of Management and Planning" }
-  - { when: "Apr 2014", what: "Lecturer, Institute for Academic Initiatives" }
-  - { when: "Apr 2008", what: "Assistant Professor, Graduate School of Information Science and Technology" }
-  - { when: "Jul 2005", what: "NTT DOCOMO, Network / Research Laboratories" }
-  - { when: "Apr 2003", what: "JSPS Research Fellow (until Mar 2005)" }
+  - { ja_when: "2024年10月", ja: "大阪大学 D3センター 准教授（組織改編による）", when: "Oct 2024", en: "Associate Professor, D3 Center, The University of Osaka (following organizational restructuring)", current: true }
+  - { ja_when: "2022年4月", ja: "大阪大学 情報推進本部 准教授", when: "Apr 2022", en: "Associate Professor, Information Promotion Division, The University of Osaka" }
+  - { ja_when: "2016年4月", ja: "大阪大学 経営企画オフィス 准教授", when: "Apr 2016", en: "Associate Professor, Office of Management and Planning, The University of Osaka" }
+  - { ja_when: "2014年4月", ja: "大阪大学 未来戦略機構 戦略企画室 講師", when: "Apr 2014", en: "Lecturer, Strategic Planning Office, Institute for Academic Initiatives, The University of Osaka" }
+  - { ja_when: "2012年4月", ja: "大阪大学 評価・情報分析室 助教", when: "Apr 2012", en: "Assistant Professor, Evaluation and Information Analysis Office, The University of Osaka" }
+  - { ja_when: "2008年4月", ja: "大阪大学 データ管理分析室 助教", when: "Apr 2008", en: "Assistant Professor, Data Management and Analysis Office, The University of Osaka" }
+  - { ja_when: "2008年4月", ja: "大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 助教（兼任）", when: "Apr 2008", en: "Assistant Professor (concurrent), Dept. of Information Networking, Graduate School of Information Science and Technology, The University of Osaka" }
+  - { ja_when: "2006年7月", ja: "NTTドコモ 総合研究所（配置換）", when: "Jul 2006", en: "NTT DOCOMO, Research Laboratories (reassignment)" }
+  - { ja_when: "2005年7月", ja: "NTTドコモ ネットワーク研究所", when: "Jul 2005", en: "NTT DOCOMO, Network Laboratories" }
+  - { ja_when: "2005年4月", ja: "NTTドコモ 神奈川支店", when: "Apr 2005", en: "NTT DOCOMO, Kanagawa Branch" }
+  - { ja_when: "2003年4月", ja: "日本学術振興会 特別研究員（2005年3月まで）", when: "Apr 2003", en: "JSPS Research Fellow (until Mar 2005)" }
 education:
-  - { when: "Mar 2004", what: "Ph.D. (Engineering), Graduate School of Engineering Science, The University of Osaka", recent: true }
-  - { when: "Mar 2001", what: "M.Eng., Division of Information and Mathematical Science" }
-  - { when: "Mar 1999", what: "School of Engineering Science, Dept. of Information Science (advanced early to graduate school)" }
+  - { ja_when: "2004年3月", ja: "大阪大学 大学院基礎工学研究科 情報数理系専攻 博士後期課程修了　博士(工学)", when: "Mar 2004", en: "Ph.D. (Engineering), Division of Information and Mathematical Science, Graduate School of Engineering Science, The University of Osaka", current: true }
+  - { ja_when: "2001年3月", ja: "大阪大学 大学院基礎工学研究科 情報数理系専攻 博士前期課程修了", when: "Mar 2001", en: "M.Eng., Division of Information and Mathematical Science, Graduate School of Engineering Science, The University of Osaka" }
+  - { ja_when: "1999年3月", ja: "大阪大学 基礎工学部 情報工学科 中退（3年次より飛び級で大学院に進学）", when: "Mar 1999", en: "School of Engineering Science, Dept. of Information Science, The University of Osaka (advanced early to graduate school after the third year)" }

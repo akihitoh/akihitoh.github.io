@@ -17,6 +17,10 @@
   var mainEl = document.getElementById("pubMain");
   var searchEl = document.getElementById("pubSearch");
 
+  function countOf(k) {
+    return (DATA[k].groups || []).reduce(function (n, g) { return n + g.items.length; }, 0);
+  }
+
   function counts() {
     var c = {}, total = 0;
     CATS.forEach(function (k) {
@@ -32,6 +36,12 @@
     return String(s).replace(/[&<>]/g, function (ch) {
       return ch === "&" ? "&amp;" : ch === "<" ? "&lt;" : "&gt;";
     });
+  }
+
+  // 本人名を強調（esc 済み文字列に適用）
+  var SELF = /(廣森 聡仁|Akihito Hiromori)/g;
+  function markSelf(html) {
+    return html.replace(SELF, '<strong class="me">$1</strong>');
   }
 
   function setAllOpen(val) {
@@ -75,13 +85,14 @@
         var key = k + "|" + g.era;
         var open = q ? true : !!state.open[key];
         var items = filtered.map(function (t, i) {
-          return '<li><span class="n">' + (i + 1) + '</span><span class="txt">' + esc(t) + "</span></li>";
+          return '<li><span class="n">' + (i + 1) + '</span><span class="txt">' + markSelf(esc(t)) + "</span></li>";
         }).join("");
         groupsHtml.push(
           '<div class="pub-group">' +
-            '<button class="pub-group-toggle" data-key="' + key + '">' +
-              '<span class="chev">' + (open ? "▼" : "▶") + "</span>" +
+            '<button class="pub-group-toggle" data-key="' + key + '" aria-expanded="' + open + '">' +
+              '<span class="chev" aria-hidden="true">' + (open ? "▼" : "▶") + "</span>" +
               '<span class="era">' + esc(g.era) + "</span>" +
+              '<span class="era-count">' + filtered.length + "件</span>" +
             "</button>" +
             '<ol class="pub-list"' + (open ? "" : " hidden") + ">" + items + "</ol>" +
           "</div>"
@@ -93,7 +104,8 @@
       sec.className = "pub-section";
       sec.innerHTML =
         '<div class="section-head"><h2>' + esc(src.label) + '</h2>' +
-        '<span class="en">' + esc(src.labelEn) + "</span></div>" +
+        '<span class="en">' + esc(src.labelEn) + "</span>" +
+        '<span class="count">' + countOf(k) + "件</span></div>" +
         groupsHtml.join("");
       mainEl.appendChild(sec);
     });
