@@ -1,5 +1,6 @@
 // 研究業績データ
-// カテゴリ → 年代グループ → 各エントリ（引用文字列）
+// カテゴリ → 年代グループ（5年単位） → 各エントリ
+// エントリは引用文字列。DOI がある場合は { c: "引用文字列", doi: "10.xxxx/..." }
 window.PUBLICATIONS = {
   journal: {
     key: "journal",
@@ -7,22 +8,27 @@ window.PUBLICATIONS = {
     labelEn: "Journal Articles",
     groups: [
       {
-        era: "2020–",
+        era: "2025–",
         items: [
-          `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Nursing Care Taxi Dispatch Leveraging Integer Linear Programming Solvers and Machine Learning", IEEE Transactions on Intelligent Transportation Systems, pp.1-16, Jun 2026.`,
-          `廣森 聡仁, 鎗水 徹, "Transformerモデルを用いた人名のアルファベット–カタカナ表記変換手法", 学術情報処理研究, Vol.29, No.1, pp.199-206, 2025年11月.`,
-          `Gerassimos D. Barlas, Khaled El-Fakih, Akihito Hiromori, Hirozumi Yamaguchi, "P2P-assisted distributed-server content delivery of 8K media: a DLT-based approach", Multimedia Tools and Applications, Vol.84, No.26, pp.31657-31694, 2025.`,
-          `松本 哲, 原口 直大, 大平 健司, 廣森 聡仁, 鎗水 徹, 猪俣 敦夫, "デジタルトランスフォーメーションを支える新たなID―ID統合構想「OUID」推進の経過報告", 学術情報処理研究, Vol.28, No.1, pp.16-22, 2024年11月.`,
-          `Hirozumi Yamaguchi, Hamada Rizk, Tatsuya Amano, Akihito Hiromori, Riki Ukyo, Shota Yamada, Masakazu Ohno, "Towards intelligent environments: human sensing through 3D point cloud", Journal of Reliable Intelligent Environments, Vol.10, No.3, pp.281-298, Aug 2024.`,
-          `Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "Anomaly Detection of Building Structure from Incomplete Point Cloud Obtained by UAV", Journal of Information Processing, Vol.32, pp.520-532, Jun 2024.`,
-          `Akira Uchiyama, Akihito Hiromori, Ryota Akikawa, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Risky Traffic Situation Detection and Classification Using Smartphones", IEEE Open Journal of Intelligent Transportation Systems, Vol.4, pp.846-857, Nov 2023.`,
+          { c: `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Nursing Care Taxi Dispatch Leveraging Integer Linear Programming Solvers and Machine Learning", IEEE Transactions on Intelligent Transportation Systems, pp.1-16, Jun 2026.`, doi: "10.1109/tits.2026.3709001" },
+          { c: `廣森 聡仁, 鎗水 徹, "Transformerモデルを用いた人名のアルファベット–カタカナ表記変換手法", 学術情報処理研究, Vol.29, No.1, pp.199-206, 2025年11月.`, doi: "10.24669/jacn.29_0039" },
+          { c: `Gerassimos D. Barlas, Khaled El-Fakih, Akihito Hiromori, Hirozumi Yamaguchi, "P2P-assisted distributed-server content delivery of 8K media: a DLT-based approach", Multimedia Tools and Applications, Vol.84, No.26, pp.31657-31694, 2025.`, doi: "10.1007/s11042-024-20432-3" }
+        ]
+      },
+      {
+        era: "2020–2024",
+        items: [
+          { c: `松本 哲, 原口 直大, 大平 健司, 廣森 聡仁, 鎗水 徹, 猪俣 敦夫, "デジタルトランスフォーメーションを支える新たなID―ID統合構想「OUID」推進の経過報告", 学術情報処理研究, Vol.28, No.1, pp.16-22, 2024年11月.`, doi: "10.24669/jacn.28.1_16" },
+          { c: `Hirozumi Yamaguchi, Hamada Rizk, Tatsuya Amano, Akihito Hiromori, Riki Ukyo, Shota Yamada, Masakazu Ohno, "Towards intelligent environments: human sensing through 3D point cloud", Journal of Reliable Intelligent Environments, Vol.10, No.3, pp.281-298, Aug 2024.`, doi: "10.1007/s40860-024-00234-y" },
+          { c: `Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "Anomaly Detection of Building Structure from Incomplete Point Cloud Obtained by UAV", Journal of Information Processing, Vol.32, pp.520-532, Jun 2024.`, doi: "10.2197/ipsjjip.32.520" },
+          { c: `Akira Uchiyama, Akihito Hiromori, Ryota Akikawa, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Risky Traffic Situation Detection and Classification Using Smartphones", IEEE Open Journal of Intelligent Transportation Systems, Vol.4, pp.846-857, Nov 2023.`, doi: "10.1109/ojits.2023.3333263" },
           `右京 莉規, 天野 辰哉, 廣森 聡仁, 山口 弘純, 東野 輝夫, "公共空間における三次元点群の不完全性に対して堅牢な歩行者トラッキング手法", 情報処理学会論文誌, Vol.63, No.8, pp.1361-1370, 2022年.`
         ]
       },
       {
-        era: "2010–2019",
+        era: "2015–2019",
         items: [
-          `Moustafa Elhamshary, Moustafa Youssef, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "CrowdMeter: Gauging congestion level in railway stations using smartphones", Pervasive and Mobile Computing, Vol.58, 2019.`,
+          { c: `Moustafa Elhamshary, Moustafa Youssef, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "CrowdMeter: Gauging congestion level in railway stations using smartphones", Pervasive and Mobile Computing, Vol.58, 2019.`, doi: "10.1016/j.pmcj.2019.04.005" },
           `山田 遊馬, 廣森 聡仁, 山口 弘純, 東野 輝夫, "測域センサを利用した高精度な路線バス乗降計測システム", 情報処理学会論文誌, Vol.60, No.3, pp.934-944, 2019年3月.`,
           `吉貞 洸, 山田 遊馬, 廣森 聡仁, 山口 弘純, 東野 輝夫, "屋内空間における測域センサ群の相対位置推定手法の提案", 情報処理学会論文誌, Vol.59, No.8, pp.1485-1498, 2018年8月.`,
           `長船 辰昭, 西村 友佑, 加藤 聖也, 廣森 聡仁, 山口 弘純, 東野 輝夫, "鉱山用重機間通信による周辺重機検出手法の提案", 情報処理学会論文誌, Vol.58, No.1, pp.68-78, 2017年.`,
@@ -30,7 +36,12 @@ window.PUBLICATIONS = {
           `齊藤 貴浩, 和嶋 雄一郎, 廣森 聡仁, 安部(小貫) 有紀子, 藤井 翔太, 前原 忠信, "世界的研究大学との協力による学生経験調査の実施と阪大生の特徴に関する考察", 大阪大学高等教育研究, No.4, pp.1-14, 2016年.`,
           `山田 遊馬, 内山 彰, 廣森 聡仁, 山口 弘純, 東野 輝夫, "携帯電話の基地局通信履歴と地理情報を用いたパーソントリップ推定法の提案", 情報処理学会論文誌, Vol.57, No.8, pp.1826-1834, 2016年.`,
           `高藤 巧, 藤田 和久, 樋口 雄大, 廣森 聡仁, 山口 弘純, 東野 輝夫, 下條 真司, "トラッキングスキャナとモーションセンサを用いた高精度屋内位置推定手法の提案", 情報処理学会論文誌, Vol.57, No.1, pp.353-365, 2016年.`,
-          `中村 笙子, 志垣 沙衣子, 廣森 聡仁, 山口 弘純, 東野 輝夫, "大衆の生活ノウハウの定量化とモデル化によるスマートライフ支援システム", 情報処理学会論文誌, Vol.56, No.8, pp.1621-1633, 2015年8月.`,
+          `中村 笙子, 志垣 沙衣子, 廣森 聡仁, 山口 弘純, 東野 輝夫, "大衆の生活ノウハウの定量化とモデル化によるスマートライフ支援システム", 情報処理学会論文誌, Vol.56, No.8, pp.1621-1633, 2015年8月.`
+        ]
+      },
+      {
+        era: "2010–2014",
+        items: [
           `山口 弘純, 廣森 聡仁, 東野 輝夫, 梅原 茂樹, 浦山 博史, 山田 雅也, 前野 誉, 金田 茂, 高井 峰生, "密な基地局群の無線相互干渉調停のための空間分割スケジューリング技術", 情報処理学会論文誌, Vol.55, No.2, pp.826-837, 2014年2月.`,
           `金谷 拓実, 廣森 聡仁, 山口 弘純, 東野 輝夫, "現実的な都市環境モデリングに基づく行動センシングシステムシミュレータの設計開発", 情報処理学会論文誌, Vol.54, No.11, pp.2371-2382, 2013年11月.`,
           `境 裕樹, 廣森 聡仁, 山口 弘純, 東野 輝夫, "オーバレイネットワーク上でアプリケーションサービスを実行するプラットフォームの設計と実装", 情報処理学会論文誌, Vol.53, No.11, pp.2612-2623, 2012年11月.`,
@@ -39,20 +50,25 @@ window.PUBLICATIONS = {
         ]
       },
       {
-        era: "2001–2009",
+        era: "2005–2009",
         items: [
           `森 駿介, 梅津 高朗, 廣森 聡仁, 山口 弘純, 東野 輝夫, "ワイヤレスセンサネットワークの設計開発支援環境D-sense", 情報処理学会論文誌, Vol.50, No.10, pp.2556-2567, 2009年10月.`,
           `中田 圭佑, 前田 久美子, 梅津 高朗, 廣森 聡仁, 山口 弘純, 東野 輝夫, "災害現場の被災者や救援者の行動記述とそれを用いたネットワークシミュレーション環境の提案", 情報処理学会論文誌, Vol.50, No.9, pp.2327-2339, 2009年9月.`,
           `池田 和史, バデゥゲ ティルミー マーリンダ, 廣森 聡仁, 山口 弘純, 東野 輝夫, "安定したストリーム配信を実現するオーバレイマルチキャストプロトコルの設計とPlanetLab上での実証実験", 情報処理学会論文誌, Vol.50, No.6, pp.1549-1560, 2009年6月.`,
-          `Thilmee M. Baduge, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Distributed Algorithm for Constructing Minimum Delay Spanning Trees under Bandwidth Constraints on Overlay Networks", Systems and Computers in Japan, Vol.37, No.14, pp.15-23, Dec 2006.`,
+          { c: `Thilmee M. Baduge, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Distributed Algorithm for Constructing Minimum Delay Spanning Trees under Bandwidth Constraints on Overlay Networks", Systems and Computers in Japan, Vol.37, No.14, pp.15-23, Dec 2006.`, doi: "10.1002/scj.20655" },
           `バデゥゲ ティルミー マーリンダ, 廣森 聡仁, 山口 弘純, 東野 輝夫, "帯域制約のもとで遅延最小のオーバレイマルチキャスト木を構築する分散アルゴリズム", 電子情報通信学会論文誌, Vol.88, No.11, pp.1648-1658, 2005年11月.`,
-          `バデゥゲ ティルミー マーリンダ, 廣森 聡仁, 梅津 高朗, 山口 弘純, 東野 輝夫, "オーバレイネットワーク上で遅延最小木を動的に構築する分散型プロトコルMODEの提案と評価", 情報処理学会論文誌, Vol.46, No.2, pp.482-492, 2005年2月.`,
+          `バデゥゲ ティルミー マーリンダ, 廣森 聡仁, 梅津 高朗, 山口 弘純, 東野 輝夫, "オーバレイネットワーク上で遅延最小木を動的に構築する分散型プロトコルMODEの提案と評価", 情報処理学会論文誌, Vol.46, No.2, pp.482-492, 2005年2月.`
+        ]
+      },
+      {
+        era: "2000–2004",
+        items: [
           `水本 明, 山口 弘純, 廣森 聡仁, 谷口 健一, "MANETにおける位置情報マルチキャストルーティングMgCastの提案と性能評価", 情報処理学会論文誌, Vol.45, No.10, pp.2324-2334, 2004年10月.`,
           `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "大規模ネットワークシミュレーション向けのルーティングテーブルの容量削減", 情報処理学会論文誌, Vol.45, No.4, pp.1134-1143, 2004年4月.`,
-          `山口 弘純, 中村 嘉隆, 廣森 聡仁, 安本 慶一, 東野 輝夫, 谷口 健一, "動画像を用いたコミュニケーションシステム向けのアプリケーション層マルチキャスト", コンピュータソフトウェア, Vol.21, No.2, pp.83-93, 2004年3月.`,
+          { c: `山口 弘純, 中村 嘉隆, 廣森 聡仁, 安本 慶一, 東野 輝夫, 谷口 健一, "動画像を用いたコミュニケーションシステム向けのアプリケーション層マルチキャスト", コンピュータソフトウェア, Vol.21, No.2, pp.83-93, 2004年3月.`, doi: "10.11309/jssst.21.83" },
           `中村 嘉隆, 山口 弘純, 廣森 聡仁, 安本 慶一, 東野 輝夫, 谷口 健一, "エンドホストの動画像フィルタリングによるアプリケーション層でのQoSマルチキャストプロトコルの提案", 情報処理学会論文誌, Vol.45, No.2, pp.438-448, 2004年2月.`,
           `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "IPマルチキャスト環境における複製動画像サーバ選択アルゴリズム", 情報処理学会論文誌, Vol.43, No.2, pp.408-417, 2002年2月.`,
-          `山口 弘純, 廣森 聡仁, 安本 慶一, 東野 輝夫, 谷口 健一, "環境適応型のQoS制御を行うネットワーク資源管理システム", コンピュータソフトウェア, Vol.18, No.3, pp.243-249, 2001年5月.`
+          { c: `山口 弘純, 廣森 聡仁, 安本 慶一, 東野 輝夫, 谷口 健一, "環境適応型のQoS制御を行うネットワーク資源管理システム", コンピュータソフトウェア, Vol.18, No.3, pp.243-249, 2001年5月.`, doi: "10.11309/jssst.18.327" }
         ]
       }
     ]
@@ -63,90 +79,100 @@ window.PUBLICATIONS = {
     labelEn: "International Conferences",
     groups: [
       {
-        era: "2020–",
+        era: "2025–",
         items: [
-          `Hamada Rizk, Yui Maruyama, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, Takahiro Inagawa, "Surrogate-Guided Graph Policy Learning for Real-Time Coordination of Mobile Agents", 2026 27th IEEE International Conference on Mobile Data Management (MDM 2026), pp.184-192, Jun 2026.`,
+          { c: `Hamada Rizk, Yui Maruyama, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, Takahiro Inagawa, "Surrogate-Guided Graph Policy Learning for Real-Time Coordination of Mobile Agents", 2026 27th IEEE International Conference on Mobile Data Management (MDM 2026), pp.184-192, Jun 2026.`, doi: "10.1109/mdm71479.2026.00031" },
           `Sodai Joshin, Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, Takahiro Inagawa, "Preliminary Evaluation of HPC-Based Scenario Analysis for Dense Formation Flying", SC-Asia 2026 (Poster P-226), 2026.`,
-          `Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.24-25, 2026.`,
-          `Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.30-31, 2026.`,
-          `Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.32-33, 2026.`,
-          `Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.36-37, 2026.`,
-          `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.46-47, 2026.`,
+          { c: `Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Modeling and Analysis for LoRa Emergency Network Scheduling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.24-25, 2026.`, doi: "10.1145/3737611.3776962" },
+          { c: `Ibuki Matsumoto, Takamasa Higuchi, Fukuharu Tanaka, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Takanashi, "Neural Surrogate Model for Autonomous Driving Communications Based on Strategic Sampling", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.30-31, 2026.`, doi: "10.1145/3737611.3776965" },
+          { c: `Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sou Ema, Sumio Morioka, Takahiro Inagawa, "Scalable Coverage Simulation Workflow for Formation-Flying Satellite Phased Arrays", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.32-33, 2026.`, doi: "10.1145/3737611.3776966" },
+          { c: `Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "Rapid Policy Impact Estimation for Pedestrian Flow Using Neural Network Surrogates", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.36-37, 2026.`, doi: "10.1145/3737611.3776968" },
+          { c: `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "A Transformer-based Approach for Attribute-Aware Route Optimization Guided by ILP Solutions", Companion Proceedings of the 27th International Conference on Distributed Computing and Networking (ICDCN 2026), pp.46-47, 2026.`, doi: "10.1145/3737611.3776947" },
           `Yuto Inaba, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Environment-Aware Probabilistic Distributed Scheduling for Emergency LoRa Networks", The 8th International Workshop on Security, Privacy and Trust in the Internet of Things (SPT-IoT 2026) in conjunction with IEEE PerCom 2026, Mar 2026.`,
           `Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Sumio Morioka, "Toward Massive Satellite Swarms: A Simulation Framework for Precision Formation Flying", 2026 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops), PerVehicle, pp.230-235, Mar 2026.`,
-          `Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sumio Morioka, Takahiro Inagawa, "Accurate and Scalable Simulation for Large Formation-Flying Satellite Arrays", 2025 IEEE Annual Congress on Artificial Intelligence of Things (AIoT 2025), pp.449-456, Dec 2025.`,
-          `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.`,
-          `Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.`,
-          `Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.`,
-          `Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.`,
+          { c: `Tengis Buyantogtokh, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Genma Hattori, Sumio Morioka, Takahiro Inagawa, "Accurate and Scalable Simulation for Large Formation-Flying Satellite Arrays", 2025 IEEE Annual Congress on Artificial Intelligence of Things (AIoT 2025), pp.449-456, Dec 2025.`, doi: "10.1109/aiot66900.2025.00070" },
+          { c: `Riku Nakao, Akihito Hiromori, Hamada Rizk, Hirozumi Yamaguchi, "Optimizing Coordinated Evacuation Route Planning Based on Linear Programming", 2025 IEEE International Conference on Smart Computing (SMARTCOMP 2025), pp.414-419, 2025.`, doi: "10.1109/SMARTCOMP65954.2025.00118" },
+          { c: `Fukuharu Tanaka, Takamasa Higuchi, Masaki Takanashi, Tatsuya Amano, Hamada Rizk, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, "On the Impact of Terrain Types in Deep Neural Network-Based Surrogates of Radio Maps", The 13th International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2025), pp.1-6, 2025.`, doi: "10.23919/ICMU65253.2025.11219164" },
+          `Junxiong Long, Akihito Hiromori, Akira Uchiyama, "A Preliminary Study on Synthesizing mmWave Radar Range-Doppler Maps under Occlusion", 2025 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops 2025), pp.355-360, Mar 2025.`
+        ]
+      },
+      {
+        era: "2020–2024",
+        items: [
+          { c: `Fukuharu Tanaka, Tatsuya Amano, Akira Uchiyama, Akihito Hiromori, Yusuke Nakamura, Hirozumi Yamaguchi, "Policy Optimization for Pedestrian Traffic Management by Surrogation of Simulation Models", The 21st IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS 2024), Sep 2024.`, doi: "10.1109/MASS62177.2024.00036" },
           `Doyoon Lee, Akihito Hiromori, Mineo Takai, Hirozumi Yamaguchi, "Efficient On-Ramp Merging Point Prediction Using Machine Learning", 27th IEEE International Conference on Intelligent Transportation Systems (ITSC 2024), pp.687-692, Sep 2024.`,
-          `Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.`,
+          { c: `Ren Ozeki, Akihito Hiromori, Hirozumi Yamaguchi, "Adaptive Pub/Sub Message Delivery for World Weather IoT", GLOBECOM, pp.2608-2613, Dec 2023.`, doi: "10.1109/GLOBECOM54140.2023.10437656" },
           `Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, "A Method for Building Recognition from Point Cloud obtained by UAV with Simple Trajectory Patterns", The 2022 IEEE 8th World Forum on Internet of Things (WF-IoT 2022), Oct 2022.`,
-          `Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.593-598, Mar 2022.`,
-          `Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.`,
-          `Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.`,
-          `Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.1-6, Oct 2020.`,
-          `Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.`
+          { c: `Kazuki Hayashi, Akihito Hiromori, Hirozumi Yamaguchi, Masaki Suzuki, Takeshi Kitahara, "Synthesizing Town-scale Vehicle Mobility from Traffic Surveillance Cameras: A Case Study", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.593-598, Mar 2022.`, doi: "10.1109/percomworkshops53856.2022.9767393" },
+          { c: `Riki Ukyo, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, "Pedestrian Tracking in Public Passageway by Single 3D Depth Sensor", 2022 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.581-586, 2022.`, doi: "10.1109/PerComWorkshops53856.2022.9767224" },
+          { c: `Yukihiro Tsukamoto, Tatsuya Amano, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Road Segment Re-Identification in Dashcam Videos", 2021 17th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.19-24, 2021.`, doi: "10.1109/WiMob52687.2021.9606254" },
+          { c: `Yukihiro Tsukamoto, Masahiro Ishizaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Multi-Lane Detection and Tracking Using Vision for Traffic Situation Awareness", 2020 16th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), pp.1-6, Oct 2020.`, doi: "10.1109/wimob50308.2020.9253415" },
+          { c: `Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "Smartphone-based Risky Traffic Situation Detection and Classification", 2020 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.1-6, Mar 2020.`, doi: "10.1109/PerComWorkshops48775.2020.9156157" }
         ]
       },
       {
-        era: "2010–2019",
+        era: "2015–2019",
         items: [
-          `Tatsuya Amano, Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "VR Application Framework for Collecting Sensor Data in Risky Situations", Proceedings of the 20th International Middleware Conference Demos and Posters (Middleware 2019), pp.31-32, Dec 2019.`,
-          `Yusuke Nishimura, Atsushi Fujita, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Akira Suwa, Hirofumi Urayama, Susumu Takeshima, Mineo Takai, "A Study on Behavior of Autonomous Vehicles Cooperating with Manually-Driven Vehicles", 2019 IEEE International Conference on Pervasive Computing and Communications (PerCom 2019), pp.212-219, Mar 2019.`,
+          { c: `Tatsuya Amano, Ryota Akikawa, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Masaki Suzuki, Yasuhiko Hiehata, Takeshi Kitahara, "VR Application Framework for Collecting Sensor Data in Risky Situations", Proceedings of the 20th International Middleware Conference Demos and Posters (Middleware 2019), pp.31-32, Dec 2019.`, doi: "10.1145/3366627.3368119" },
+          { c: `Yusuke Nishimura, Atsushi Fujita, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Akira Suwa, Hirofumi Urayama, Susumu Takeshima, Mineo Takai, "A Study on Behavior of Autonomous Vehicles Cooperating with Manually-Driven Vehicles", 2019 IEEE International Conference on Pervasive Computing and Communications (PerCom 2019), pp.212-219, Mar 2019.`, doi: "10.1109/PERCOM.2019.8767390" },
           `Takayuki Saki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Occlusion-based trajectory estimation for pedestrians using LiDAR sensors", CEUR Workshop Proceedings, Vol.2498, pp.400-407, 2019.`,
-          `Hikaru Yoshisada, Yuma Yamada, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Map Generation from Multiple LIDAR Point Clouds", 2018 IEEE International Conference on Smart Computing (SMARTCOMP 2018), pp.73-80, Jun 2018.`,
-          `Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Takaaki Umedu, "Re-Thinking: Design and Development of Mobility Aware Applications in Smart and Connected Communities", 38th IEEE International Conference on Distributed Computing Systems (ICDCS 2018), pp.1171-1179, Jul 2018.`,
-          `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, "A Human Tracking and Sensing Platform for Enabling Smart City Applications", Proceedings of the Workshop Program of the 19th International Conference on Distributed Computing and Networking (ICDCN 2018 Workshops), pp.13:1-13:6, Jan 2018.`,
-          `Yusuke Nishimura, Tatsuaki Osafune, Seiya Kato, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Vehicle Proximity Awareness by Inter-Vehicle Communication for Surface Mine Operation Safety", IEEE Vehicular Technology Conference, pp.1-7, Nov 2017.`,
-          `Sohei Kojima, Akira Uchiyama, Masumi Shirakawa, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Crowd and Event Detection by Fusion of Camera Images and Micro Blogs", 2017 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.213-218, 2017.`,
-          `Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Keiichi Yasumoto, "Edge Computing and IoT Based Research for Building Safe Smart Cities Resistant to Disasters", 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS 2017), pp.1729-1737, 2017.`,
-          `Yuma Yamada, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Travel Estimation Using Control Signal Records in Cellular Networks and Geographical Information", 2016 9th IFIP Wireless and Mobile Networking Conference (WMNC), pp.138-144, 2016.`,
-          `Shoko Nakamura, Saeko Shigaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A model-based approach to support smart and social home living", Proceedings of the 2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp 2015), pp.1101-1105, Sep 2015.`,
-          `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Shigeki Umehara, Hirofumi Urayama, Masaya Yamada, Taka Maeno, Shigeru Kaneda, Mineo Takai, "Scalable and robust channel allocation for densely-deployed urban wireless stations", Performance Evaluation, Vol.87, pp.74-91, May 2015.`,
-          `Kenji Yoi, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Teruo Higashino, Naohisa Yanagiya, Toshikazu Nakatani, Atsuo Tachibana, Teruyuki Hasegawa, "Multi-dimensional sensor data aggregator for adaptive network management in M2M communications", 2015 IFIP/IEEE International Symposium on Integrated Network Management (IM 2015), pp.1047-1052, May 2015.`,
-          `Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Shinji Shimojo, "Human crowd detection for physical sensing assisted geo-social multimedia mining", 2015 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), pp.642-647, Apr 2015.`,
-          `Takumi Satoh, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A novel estimation method of road condition for pedestrian navigation", 2015 IEEE International Conference on Pervasive Computing and Communication Workshops (PerMoby 2015), pp.427-432, Mar 2015.`,
-          `Ryosuke Tanimura, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Prediction of Deceleration Amount of Vehicle Speed in Snowy Urban Roads Using Weather Information and Traffic Data", 2015 IEEE 18th International Conference on Intelligent Transportation Systems (ITSC 2015), pp.2268-2273, 2015.`,
-          `Tomoyuki Tange, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "An Analysis Model of Queue Length Fluctuation at Signals Using Vehicle Trajectories", The 3rd International Conference on Connected Vehicles & Expo (ICCVE 2014), pp.577-583, Nov 2014.`,
-          `Takumi Takafuji, Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Localization Utilizing Tracking Scanners and Motion Sensors", 2014 IEEE Eleventh International Conference on Ubiquitous Intelligence and Computing (UIC/ATC/ScalCom 2014), pp.112-119, 2014.`,
-          `Yuma Akai, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Mitigating location and speed errors in floating car data using context-based accuracy estimation", 2013 13th International Conference on ITS Telecommunications (ITST), pp.104-110, Nov 2013.`,
-          `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Shigeki Umehara, Hirofumi Urayama, Masaya Yamada, Taka Maeno, Shigeru Kaneda, Mineo Takai, "A novel scheduling algorithm for densely-deployed wireless stations in urban areas", Proceedings of the 16th ACM international conference on Modeling, analysis & simulation of wireless and mobile systems - MSWiM '13, pp.317-326, Nov 2013.`,
-          `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Sensor Placement Optimization Method for People Tracking", 2013 Seventh International Conference on Next Generation Mobile Apps, Services and Technologies (NGMAST 2013), pp.62-67, Sep 2013.`,
-          `Shunsuke Mori, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Data-Centric Programming Environment for Cooperative Applications in WSN", IFIP/IEEE International Symposium on Integrated network Management (IM 2013), pp.856-859, May 2013.`,
-          `Shunsuke Mori, Chih-Yu Wang, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Design and Architecture of Cloud-based Mobile Phone Sensing Middleware", 2012 Second Symposium on Network Cloud Computing and Applications (NCCA 2012), pp.102-109, Dec 2012.`,
-          `Ayaka Murai, Yohei Yamaguchi, Yoshiyuki Shimoda, Takumi Kanaya, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Evaluation Of Energy-Saving Performance of Office Building Task/Ambient Systems Considering Dynamic Worker's Behaviour", 1st Asia conference of International Building Performance Simulation Association (Asim2012), Dec 2012.`,
-          `Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Protocol Testing and Performance Evaluation for MANETs with Non-uniform Node Density Distribution", 24th IFIP International Conference on Testing Software and Systems (ICTSS'12), Vol.7641, pp.231-246, Nov 2012.`,
-          `Akihito Hiromori, Takumi Kanaya, Hirozumi Yamaguchi, Teruo Higashino, Yohei Yamaguchi, Ayaka Murai, Yoshiyuki Shimoda, "Performance evaluation of mobility-based energy-saving to control air-conditioning and lighting equipments", Sustainable Internet and ICT for Sustainability (SustainIT), 2012, pp.1-6, Oct 2012.`,
-          `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Simulating CSMA/CA Behavior for Performance Evaluation of Multi-hop Wireless Networks", 20th International Workshop on Quality of Service (IWQoS 2012), pp.1-4, Jun 2012.`,
-          `Takumi Kanaya, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "HumanS: A Human Mobility Sensing Simulator", 2012 5th International Conference on New Technologies, Mobility and Security (NTMS 2012), pp.1-4, May 2012.`,
-          `Akihito Hiromori, Akira Uchiyama, Hirozumi Yamaguchi, Teruo Higashino, "Deadline-aware Data Collection in CSMA/CA-based Multi-sink Wireless Sensor Networks", The Sixth International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2012), pp.1-7, May 2012.`,
-          `Anuj Ratna Bajracharya, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Implementation of a data collection mechanism in electronic triage system using wireless sensor devices", 2011 IEEE 36th Conference on Local Computer Networks (LCN 2011), pp.986-989, Oct 2011.`,
-          `Eijiro Ueno, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Simple Mobility Model Realizing Designated Node Distributions and Natural Node Movement", 2011 IEEE Eighth International Conference on Mobile Ad-Hoc and Sensor Systems (MASS 2011), pp.302-311, Oct 2011.`,
-          `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Comprehensive Test Strategy for Network Protocols in Diverse Environment", 2011 IEEE 19th Annual International Symposium on Modelling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2011), pp.188-196, Jul 2011.`
+          { c: `Hikaru Yoshisada, Yuma Yamada, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Map Generation from Multiple LIDAR Point Clouds", 2018 IEEE International Conference on Smart Computing (SMARTCOMP 2018), pp.73-80, Jun 2018.`, doi: "10.1109/SMARTCOMP.2018.00076" },
+          { c: `Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Takaaki Umedu, "Re-Thinking: Design and Development of Mobility Aware Applications in Smart and Connected Communities", 38th IEEE International Conference on Distributed Computing Systems (ICDCS 2018), pp.1171-1179, Jul 2018.`, doi: "10.1109/ICDCS.2018.00117" },
+          { c: `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, "A Human Tracking and Sensing Platform for Enabling Smart City Applications", Proceedings of the Workshop Program of the 19th International Conference on Distributed Computing and Networking (ICDCN 2018 Workshops), pp.13:1-13:6, Jan 2018.`, doi: "10.1145/3170521.3170534" },
+          { c: `Yusuke Nishimura, Tatsuaki Osafune, Seiya Kato, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Vehicle Proximity Awareness by Inter-Vehicle Communication for Surface Mine Operation Safety", IEEE Vehicular Technology Conference, pp.1-7, Nov 2017.`, doi: "10.1109/VTCSpring.2017.8108449" },
+          { c: `Sohei Kojima, Akira Uchiyama, Masumi Shirakawa, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Crowd and Event Detection by Fusion of Camera Images and Micro Blogs", 2017 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), pp.213-218, 2017.`, doi: "10.1109/PERCOMW.2017.7917560" },
+          { c: `Teruo Higashino, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Keiichi Yasumoto, "Edge Computing and IoT Based Research for Building Safe Smart Cities Resistant to Disasters", 2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS 2017), pp.1729-1737, 2017.`, doi: "10.1109/ICDCS.2017.160" },
+          { c: `Yuma Yamada, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Travel Estimation Using Control Signal Records in Cellular Networks and Geographical Information", 2016 9th IFIP Wireless and Mobile Networking Conference (WMNC), pp.138-144, 2016.`, doi: "10.1109/WMNC.2016.7543981" },
+          { c: `Shoko Nakamura, Saeko Shigaki, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A model-based approach to support smart and social home living", Proceedings of the 2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp 2015), pp.1101-1105, Sep 2015.`, doi: "10.1145/2750858.2805835" },
+          { c: `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Shigeki Umehara, Hirofumi Urayama, Masaya Yamada, Taka Maeno, Shigeru Kaneda, Mineo Takai, "Scalable and robust channel allocation for densely-deployed urban wireless stations", Performance Evaluation, Vol.87, pp.74-91, May 2015.`, doi: "10.1016/j.peva.2015.02.001" },
+          { c: `Kenji Yoi, Hirozumi Yamaguchi, Akihito Hiromori, Akira Uchiyama, Teruo Higashino, Naohisa Yanagiya, Toshikazu Nakatani, Atsuo Tachibana, Teruyuki Hasegawa, "Multi-dimensional sensor data aggregator for adaptive network management in M2M communications", 2015 IFIP/IEEE International Symposium on Integrated Network Management (IM 2015), pp.1047-1052, May 2015.`, doi: "10.1109/INM.2015.7140431" },
+          { c: `Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, Shinji Shimojo, "Human crowd detection for physical sensing assisted geo-social multimedia mining", 2015 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), pp.642-647, Apr 2015.`, doi: "10.1109/INFCOMW.2015.7179458" },
+          { c: `Takumi Satoh, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A novel estimation method of road condition for pedestrian navigation", 2015 IEEE International Conference on Pervasive Computing and Communication Workshops (PerMoby 2015), pp.427-432, Mar 2015.`, doi: "10.1109/PERCOMW.2015.7134076" },
+          { c: `Ryosuke Tanimura, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Prediction of Deceleration Amount of Vehicle Speed in Snowy Urban Roads Using Weather Information and Traffic Data", 2015 IEEE 18th International Conference on Intelligent Transportation Systems (ITSC 2015), pp.2268-2273, 2015.`, doi: "10.1109/ITSC.2015.366" }
         ]
       },
       {
-        era: "2001–2009",
+        era: "2010–2014",
         items: [
-          `Keisuke Nakata, Kumiko Maeda, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Modeling and Evaluation of Rescue Operations Using Mobile Communication Devices", 2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation (PADS 2009), pp.64-71, Jun 2009.`,
-          `Yuki Sakai, Akihito Hiromori, Hirozumi Yamaguchi, Khaled El-Fakih, Teruo Higashino, "An integrated tool for development of overlay services", 2nd International Conference on Simulation Tools and Techniques (SIMUTools'09), pp.61, Mar 2009.`,
-          `Kazushi Ikeda, Shunsuke Mori, Yuya Ota, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "D-Sense: An Integrated Environment for Algorithm Design and Protocol Implementation in Wireless Sensor Networks", 11th IFIP/IEEE international conference on Management of Multimedia and Mobile Networks and Services (IFIP/IEEE MMNS 2008), pp.20-32, Sep 2008.`,
-          `Shigeru Kaneda, Akihito Hiromori, Yoshikazu Akinaga, Noriteru Shinagawa, Kazuo Sugiyama, Mineo Takai, "Performance Evaluation of Network Systems Accounting for User Behaviors", IEEE International Conference on Communications 2007 (ICC2007), pp.57-64, Jun 2007.`,
-          `Thilmee Malinda Baduge, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Design and Implementation of Overlay Multicast Protocol for Multimedia Streaming", 2005 International Conference on Parallel Processing (ICPP'05), pp.41-48, Jun 2005.`,
-          `Hirozumi Yamaguchi, Khaled El-Fakih, Akihito Hiromori, Teruo Higashino, "A formal approach to design optimized multimedia service overlay", Proceedings of the 15th International Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2005), pp.57-62, 2005.`,
+          { c: `Tomoyuki Tange, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "An Analysis Model of Queue Length Fluctuation at Signals Using Vehicle Trajectories", The 3rd International Conference on Connected Vehicles & Expo (ICCVE 2014), pp.577-583, Nov 2014.`, doi: "10.1109/ICCVE.2014.7297614" },
+          { c: `Takumi Takafuji, Kazuhisa Fujita, Takamasa Higuchi, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Indoor Localization Utilizing Tracking Scanners and Motion Sensors", 2014 IEEE Eleventh International Conference on Ubiquitous Intelligence and Computing (UIC/ATC/ScalCom 2014), pp.112-119, 2014.`, doi: "10.1109/UIC-ATC-ScalCom.2014.103" },
+          { c: `Yuma Akai, Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Mitigating location and speed errors in floating car data using context-based accuracy estimation", 2013 13th International Conference on ITS Telecommunications (ITST), pp.104-110, Nov 2013.`, doi: "10.1109/ITST.2013.6685529" },
+          { c: `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Shigeki Umehara, Hirofumi Urayama, Masaya Yamada, Taka Maeno, Shigeru Kaneda, Mineo Takai, "A novel scheduling algorithm for densely-deployed wireless stations in urban areas", Proceedings of the 16th ACM international conference on Modeling, analysis & simulation of wireless and mobile systems - MSWiM '13, pp.317-326, Nov 2013.`, doi: "10.1145/2507924.2507939" },
+          { c: `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Sensor Placement Optimization Method for People Tracking", 2013 Seventh International Conference on Next Generation Mobile Apps, Services and Technologies (NGMAST 2013), pp.62-67, Sep 2013.`, doi: "10.1109/NGMAST.2013.20" },
+          `Shunsuke Mori, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Data-Centric Programming Environment for Cooperative Applications in WSN", IFIP/IEEE International Symposium on Integrated network Management (IM 2013), pp.856-859, May 2013.`,
+          { c: `Shunsuke Mori, Chih-Yu Wang, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Design and Architecture of Cloud-based Mobile Phone Sensing Middleware", 2012 Second Symposium on Network Cloud Computing and Applications (NCCA 2012), pp.102-109, Dec 2012.`, doi: "10.1109/NCCA.2012.12" },
+          `Ayaka Murai, Yohei Yamaguchi, Yoshiyuki Shimoda, Takumi Kanaya, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Evaluation Of Energy-Saving Performance of Office Building Task/Ambient Systems Considering Dynamic Worker's Behaviour", 1st Asia conference of International Building Performance Simulation Association (Asim2012), Dec 2012.`,
+          { c: `Akihito Hiromori, Takaaki Umedu, Hirozumi Yamaguchi, Teruo Higashino, "Protocol Testing and Performance Evaluation for MANETs with Non-uniform Node Density Distribution", 24th IFIP International Conference on Testing Software and Systems (ICTSS'12), Vol.7641, pp.231-246, Nov 2012.`, doi: "10.1007/978-3-642-34691-0_17" },
+          `Akihito Hiromori, Takumi Kanaya, Hirozumi Yamaguchi, Teruo Higashino, Yohei Yamaguchi, Ayaka Murai, Yoshiyuki Shimoda, "Performance evaluation of mobility-based energy-saving to control air-conditioning and lighting equipments", Sustainable Internet and ICT for Sustainability (SustainIT), 2012, pp.1-6, Oct 2012.`,
+          { c: `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Simulating CSMA/CA Behavior for Performance Evaluation of Multi-hop Wireless Networks", 20th International Workshop on Quality of Service (IWQoS 2012), pp.1-4, Jun 2012.`, doi: "10.1109/IWQoS.2012.6245968" },
+          { c: `Takumi Kanaya, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "HumanS: A Human Mobility Sensing Simulator", 2012 5th International Conference on New Technologies, Mobility and Security (NTMS 2012), pp.1-4, May 2012.`, doi: "10.1109/NTMS.2012.6208740" },
+          `Akihito Hiromori, Akira Uchiyama, Hirozumi Yamaguchi, Teruo Higashino, "Deadline-aware Data Collection in CSMA/CA-based Multi-sink Wireless Sensor Networks", The Sixth International Conference on Mobile Computing and Ubiquitous Networking (ICMU 2012), pp.1-7, May 2012.`,
+          { c: `Anuj Ratna Bajracharya, Akira Uchiyama, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Implementation of a data collection mechanism in electronic triage system using wireless sensor devices", 2011 IEEE 36th Conference on Local Computer Networks (LCN 2011), pp.986-989, Oct 2011.`, doi: "10.1109/LCN.2011.6115582" },
+          { c: `Eijiro Ueno, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Simple Mobility Model Realizing Designated Node Distributions and Natural Node Movement", 2011 IEEE Eighth International Conference on Mobile Ad-Hoc and Sensor Systems (MASS 2011), pp.302-311, Oct 2011.`, doi: "10.1109/MASS.2011.37" },
+          { c: `Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "A Comprehensive Test Strategy for Network Protocols in Diverse Environment", 2011 IEEE 19th Annual International Symposium on Modelling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2011), pp.188-196, Jul 2011.`, doi: "10.1109/MASCOTS.2011.69" }
+        ]
+      },
+      {
+        era: "2005–2009",
+        items: [
+          { c: `Keisuke Nakata, Kumiko Maeda, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Modeling and Evaluation of Rescue Operations Using Mobile Communication Devices", 2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation (PADS 2009), pp.64-71, Jun 2009.`, doi: "10.1109/PADS.2009.23" },
+          { c: `Yuki Sakai, Akihito Hiromori, Hirozumi Yamaguchi, Khaled El-Fakih, Teruo Higashino, "An integrated tool for development of overlay services", 2nd International Conference on Simulation Tools and Techniques (SIMUTools'09), pp.61, Mar 2009.`, doi: "10.4108/ICST.SIMUTOOLS2009.5580" },
+          { c: `Kazushi Ikeda, Shunsuke Mori, Yuya Ota, Takaaki Umedu, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "D-Sense: An Integrated Environment for Algorithm Design and Protocol Implementation in Wireless Sensor Networks", 11th IFIP/IEEE international conference on Management of Multimedia and Mobile Networks and Services (IFIP/IEEE MMNS 2008), pp.20-32, Sep 2008.`, doi: "10.1007/978-3-540-87359-4-3" },
+          { c: `Shigeru Kaneda, Akihito Hiromori, Yoshikazu Akinaga, Noriteru Shinagawa, Kazuo Sugiyama, Mineo Takai, "Performance Evaluation of Network Systems Accounting for User Behaviors", IEEE International Conference on Communications 2007 (ICC2007), pp.57-64, Jun 2007.`, doi: "10.1109/ICC.2007.19" },
+          { c: `Thilmee Malinda Baduge, Akihito Hiromori, Hirozumi Yamaguchi, Teruo Higashino, "Design and Implementation of Overlay Multicast Protocol for Multimedia Streaming", 2005 International Conference on Parallel Processing (ICPP'05), pp.41-48, Jun 2005.`, doi: "10.1109/ICPP.2005.30" },
+          `Hirozumi Yamaguchi, Khaled El-Fakih, Akihito Hiromori, Teruo Higashino, "A formal approach to design optimized multimedia service overlay", Proceedings of the 15th International Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2005), pp.57-62, 2005.`
+        ]
+      },
+      {
+        era: "2000–2004",
+        items: [
           `Hirozumi Yamaguchi, Akihito Hiromori, Teruo Higashino, Kenichi Taniguchi, "An Autonomous and Decentralized Protocol for Delay Sensitive Overlay Multicast Tree", 24th International Conference on Distributed Computing Systems (ICDCS'04), pp.662-669, Mar 2004.`,
           `Yoshitaka Nakamura, Hirozumi Yamaguchi, Akihito Hiromori, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "On Designing End-user Multicast for Multiple Video Sources", 2003 International Conference on Multimedia and Expo (IEEE ICME2003), III 497-500, Jul 2003.`,
           `Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Reducing the Size of Routing Tables for Large-scale Network Simulation", 17th workshop on Parallel and Distributed Simulation (PADS '03), pp.115-122, Jun 2003.`,
-          `Hirozumi Yamaguchi, Cao Man Letan, Akihito Hiromori, Takeshi Yamashita, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Receiver Coordination Protocol for the Efficient Use of Bandwidth in Distributed Multimedia Applications", 23rd International Conference on Distributed Computing Systems Workshops (ICDCSW'03), pp.531-536, May 2003.`,
+          { c: `Hirozumi Yamaguchi, Cao Man Letan, Akihito Hiromori, Takeshi Yamashita, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Receiver Coordination Protocol for the Efficient Use of Bandwidth in Distributed Multimedia Applications", 23rd International Conference on Distributed Computing Systems Workshops (ICDCSW'03), pp.531-536, May 2003.`, doi: "10.1109/ICDCSW.2003.1203608" },
           `Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "A Server Selection Algorithm for Replicated Video Multicast Based on Packet Monitoring", 2002 International Conference on Parallel Processing (ICPP'02), pp.556-566, Aug 2002.`,
-          `Akihito Hiromori, Takeshi Yamashita, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Quality Requirement Coordination in Rate Adaptation of Multiple Layered Videos", 2nd ACIS International Conference on Software Engineering Applied to Networking & Parallel/Distributed Computing (SNPD'01), pp.540-547, Aug 2001.`
-        ]
-      },
-      {
-        era: "–2000",
-        items: [
-          `Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Fast and Optimal Multicast-Server Selection Based on Receiver' Preference", 7th International Workshop on Interactive Distributed Multimedia Systems and Telecommunication Services (IDMS 2000), pp.40-52, Oct 2000.`
+          `Akihito Hiromori, Takeshi Yamashita, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Quality Requirement Coordination in Rate Adaptation of Multiple Layered Videos", 2nd ACIS International Conference on Software Engineering Applied to Networking & Parallel/Distributed Computing (SNPD'01), pp.540-547, Aug 2001.`,
+          { c: `Akihito Hiromori, Hirozumi Yamaguchi, Keiichi Yasumoto, Teruo Higashino, Kenichi Taniguchi, "Fast and Optimal Multicast-Server Selection Based on Receiver' Preference", 7th International Workshop on Interactive Distributed Multimedia Systems and Telecommunication Services (IDMS 2000), pp.40-52, Oct 2000.`, doi: "10.1007/3-540-40002-8_5" }
         ]
       }
     ]
@@ -157,12 +183,17 @@ window.PUBLICATIONS = {
     labelEn: "Domestic Conferences",
     groups: [
       {
-        era: "2020–",
+        era: "2025–",
         items: [
           `稲葉 悠斗, 天野 辰哉, 廣森 聡仁, 山口 弘純, "多端末LoRa通信環境における衝突率予測型の自律送信制御", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2025)シンポジウム論文集, pp.935-942, 2025年6月.`,
           `吉崎 響, 内山 彰, 廣森 聡仁, 高井 峰生, 山口 弘純, "災害画像の要約に向けた深層学習モデルのファインチューニングによる被害状況分類の検討", 情報処理学会研究報告(DPS), 2025-DPS-202, 2025年.`,
           `Tengis Buyantogtokh, 内山 彰, 廣森 聡仁, 山口 弘純, Sumio Morioka, Takahiro Inagawa, "ダイレクト-ツー-セル接続性のためのPicoSatアレイ分散ビームフォーミングのシミュレーションに基づく評価", 情報処理学会研究報告, 2025年.`,
-          `山口 弘純, 高井 峰生, 廣森 聡仁, 内山 彰, Hamada Rizk, 天野 辰哉, 吉廣 卓哉, "災害時の効率的な状況理解のための多端末連携型情報集約システムに関する取り組み", 電子情報通信学会大会講演論文集, Vol.2025, 2025年.`,
+          `山口 弘純, 高井 峰生, 廣森 聡仁, 内山 彰, Hamada Rizk, 天野 辰哉, 吉廣 卓哉, "災害時の効率的な状況理解のための多端末連携型情報集約システムに関する取り組み", 電子情報通信学会大会講演論文集, Vol.2025, 2025年.`
+        ]
+      },
+      {
+        era: "2020–2024",
+        items: [
           `廣森 聡仁, 鎗水 徹, "大規模言語モデルを活用したアルファベット表記とカナ表記間の変換手法", 大学ICT推進協議会年次大会論文集, 2024年12月.`,
           `中尾 陸, 廣森 聡仁, 山口 弘純, "スマートシティ基盤上での介護タクシー配車サービスの実現に関する検討", 第32回マルチメディア通信と分散処理ワークショップ論文集, pp.85-92, 2024年10月.`,
           `Doyoon Lee, 廣森 聡仁, 高井 峰生, 山口 弘純, 西村 友佑, 長村 吉富, 竹嶋 進, "Lightweight Merging Point Prediction on Highway On-Ramps Using Regression Techniques", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2024)シンポジウム論文集, pp.1500-1506, 2024年6月.`,
@@ -184,7 +215,7 @@ window.PUBLICATIONS = {
         ]
       },
       {
-        era: "2010–2019",
+        era: "2015–2019",
         items: [
           `崎 貴幸, 廣森 聡仁, 山口 弘純, 東野 輝夫, "歩行者による背景隠蔽の継続時間及び位置に基づく移動軌跡推定手法", 第27回マルチメディア通信と分散処理ワークショップ論文集, pp.68-75, 2019年11月.`,
           `天野 辰哉, 秋川 亮太, 内山 彰, 廣森 聡仁, 山口 弘純, 東野 輝夫, 鈴木 理基, 稗圃 泰彦, 北原 武, "スマートフォンを用いたコンテキスト推定のためのVRによる危険状況再現システム", 第27回マルチメディア通信と分散処理ワークショップ論文集, pp.241-242, 2019年11月.`,
@@ -219,7 +250,12 @@ window.PUBLICATIONS = {
           `内山 彰, 樋口 雄大, 廣森 聡仁, 梅津 高朗, 山口 弘純, 安本 慶一, 東野 輝夫, "モバイル端末による被災状況の分散集約に向けた制御情報管理方式の検討", 情報処理学会研究報告(MBL), Vol.75, No.10, pp.1-8, 2015年.`,
           `高藤 巧, 樋口 雄大, 廣森 聡仁, 山口 弘純, 東野 輝夫, "スマートフォンと人流センサの連携による高精度移動軌跡推定", 情報処理学会関西支部支部大会講演論文集, 2015年.`,
           `丹下 智之, 廣森 聡仁, 梅津 高朗, 山口 弘純, 東野 輝夫, "車両プローブ情報及び上流の信号パラメータに基づく信号待ち車列長推定手法の提案", 情報処理学会関西支部支部大会講演論文集, 2015年.`,
-          `佐藤 匠, 廣森 聡仁, 山口 弘純, 東野 輝夫, "靴型ウェアラブルセンサによる通行路状況推定手法の提案", 情報処理学会研究報告(CDS), Vol.2015, No.9, pp.1-8, 2015年1月.`,
+          `佐藤 匠, 廣森 聡仁, 山口 弘純, 東野 輝夫, "靴型ウェアラブルセンサによる通行路状況推定手法の提案", 情報処理学会研究報告(CDS), Vol.2015, No.9, pp.1-8, 2015年1月.`
+        ]
+      },
+      {
+        era: "2010–2014",
+        items: [
           `山口 弘純, 廣森 聡仁, 東野 輝夫, 梅原 茂樹, 齊藤 文哉, 浦山 博史, 山田 雅也, 前野 誉, 金田 茂, 高井 峰生, "密に設置されるITS路側機群の運用シナリオに適した無線相互干渉調停アルゴリズム", 情報処理学会研究報告(ITS), 2014-ITS-28, pp.1-8, 2014年11月.`,
           `藤田 和久, 樋口 雄大, 廣森 聡仁, 山口 弘純, 東野 輝夫, 下條 真司, "多数の訪問者が滞留する展示会場における群衆検出システムの設計開発", 情報処理学会研究報告(MBL), Vol.2014, No.20, pp.1-9, 2014年8月.`,
           `高藤 巧, 藤田 和久, 樋口 雄大, 廣森 聡仁, 山口 弘純, 東野 輝夫, "トラッキングスキャナとモーションセンサを用いた高精度屋内位置推定手法の提案", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2014)シンポジウム論文集, pp.1767-1778, 2014年7月.`,
@@ -265,7 +301,7 @@ window.PUBLICATIONS = {
         ]
       },
       {
-        era: "2001–2009",
+        era: "2005–2009",
         items: [
           `廣森 聡仁, 山口 弘純, 東野 輝夫, "多様な無線ネットワークシステムを対象とした性能評価及び試験手法の提案", 第17回マルチメディア通信と分散処理ワークショップ論文集, pp.159-164, 2009年10月.`,
           `森 駿介, 梅津 高朗, 廣森 聡仁, 山口 弘純, 東野 輝夫, "無線センサネットワークにおけるノード協調モニタリングの実現", 電子情報通信学会ソサイエティ大会講演論文集, Vol.1, pp.509, 2009年9月.`,
@@ -288,7 +324,12 @@ window.PUBLICATIONS = {
           `金田 茂, 秋永 和計, 廣森 聡仁, 品川 準輝, 三浦 章, "B-6-79 地理情報を考慮したユーザ・ネットワーク統合型シミュレーションの提案", 電子情報通信学会総合大会講演論文集, Vol.2006, No.2, pp.79, 2006年3月.`,
           `廣森 聡仁, 金田 茂, 秋永 和計, 品川 準輝, 三浦 章, "B-6-74 ユーザ間相互作用によるセル滞在時間分布への影響", 電子情報通信学会総合大会講演論文集, Vol.2006, No.2, pp.74, 2006年3月.`,
           `小西 一樹, 廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "モバイルワイヤレスネットワークシミュレータMobiREALの並列実行による大規模シミュレーションの検討", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2005)シンポジウム論文集, Vol.2005, No.6, pp.493-496, 2005年7月.`,
-          `中村 嘉隆, 山口 弘純, 廣森 聡仁, 東野 輝夫, "コンポーネント連携によるサービスをオーバレイネットワーク上で実現するためのサービス設計技法の提案", 情報処理学会研究報告(DPS), Vol.2005, No.122, pp.321-326, 2005年3月.`,
+          `中村 嘉隆, 山口 弘純, 廣森 聡仁, 東野 輝夫, "コンポーネント連携によるサービスをオーバレイネットワーク上で実現するためのサービス設計技法の提案", 情報処理学会研究報告(DPS), Vol.2005, No.122, pp.321-326, 2005年3月.`
+        ]
+      },
+      {
+        era: "2000–2004",
+        items: [
           `小西 一樹, 内山 彰, 廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "MANETアプリケーション向けのシミュレータMobiREALの実装に関する検討", 情報処理学会研究報告(ITS), Vol.2004, No.114, pp.55-62, 2004年11月.`,
           `佐藤 和基, 内山 彰, 廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, "現実世界の人物行動に即した移動モデルの検討とモバイルアドホックネットワークシミュレータへの応用", 電子情報通信学会ソサイエティ大会講演論文集, Vol.2004, No.2, pp.1349-1369, 2004年9月.`,
           `前田 久美子, 佐藤 和基, 小西 一樹, 内山 彰, 廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, "携帯端末の現実的な移動モデルを表現可能なネットワークシミュレータの設計と実装", 情報処理学会研究報告(DPS), Vol.2004, No.89, pp.21-27, 2004年9月.`,
@@ -308,13 +349,13 @@ window.PUBLICATIONS = {
           `山下 剛, 廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "複数の階層化マルチキャストストリームに対するユーザの品質要求を考慮した受信階層数制御方式", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2001)シンポジウム論文集, pp.627-632, 2001年7月.`,
           `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "動画像マルチキャスト配信における複製サーバ選択アルゴリズムの提案と性能評価", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2001)シンポジウム論文集, pp.331-336, 2001年7月.`,
           `山下 剛, 廣森 聡仁, 山口 弘純, 谷口 健一, "多人数参加型マルチメディアアプリケーション向きの協調的輻輳制御方式の提案と実装", 情報処理学会 第62回全国大会講演論文集, Vol.62, No.1, pp.421-422, 2001年3月.`,
-          `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "複数のマルチキャストストリーム配送における品質満足度を考慮した中継サーバ選択方式の提案", 情報処理学会 第62回全国大会講演論文集, Vol.62, No.3, pp.419-420 (7T-04), 2001年3月.`
+          `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "複数のマルチキャストストリーム配送における品質満足度を考慮した中継サーバ選択方式の提案", 情報処理学会 第62回全国大会講演論文集, Vol.62, No.3, pp.419-420 (7T-04), 2001年3月.`,
+          `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "コンテンツに対するユーザの好みを考慮したマルチキャストサーバ選択方式", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2000)シンポジウム論文集, pp.235-240, 2000年7月.`
         ]
       },
       {
-        era: "–2000",
+        era: "–1999",
         items: [
-          `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "コンテンツに対するユーザの好みを考慮したマルチキャストサーバ選択方式", 情報処理学会 マルチメディア，分散，協調とモバイル(DICOMO2000)シンポジウム論文集, pp.235-240, 2000年7月.`,
           `廣森 聡仁, 山口 弘純, 安本 慶一, 東野 輝夫, 谷口 健一, "要求品質から要求帯域幅への変換方式と動的な帯域幅制御", 情報処理学会 第59回全国大会講演論文集, Vol.59, No.3, pp.3-535 (2V-5), 1999年9月.`
         ]
       }

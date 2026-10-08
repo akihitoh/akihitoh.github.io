@@ -1,4 +1,5 @@
 {%- assign p = page.url -%}
+{%- if page.alt_url -%}{%- assign alt = page.alt_url -%}{%- elsif page.lang == 'en' -%}{%- assign alt = "/" -%}{%- else -%}{%- assign alt = "/about-en/" -%}{%- endif -%}
 <header class="site-header">
   <nav class="nav">
     {%- if page.lang == 'en' -%}
@@ -9,9 +10,10 @@
       <button class="nav-toggle" aria-label="Menu" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
         <a href="{{ "/about-en/" | relative_url }}#research">Research</a>
-        <a href="{{ "/works/" | relative_url }}"{% if p contains 'works' %} class="active"{% endif %}>Publications</a>
+        <a href="{{ "/en/publications/" | relative_url }}"{% if p contains 'publications' %} class="active" aria-current="page"{% endif %}>Publications</a>
+        <a href="{{ "/en/funding/" | relative_url }}"{% if p contains 'funding' %} class="active" aria-current="page"{% endif %}>Funding</a>
         <a href="{{ "/about-en/" | relative_url }}#cv">CV</a>
-        <a class="pill" href="{{ "/" | relative_url }}">日本語</a>
+        <a class="pill" href="{{ alt | relative_url }}" lang="ja" hreflang="ja">日本語</a>
       </div>
     {%- else -%}
       <a class="brand" href="{{ "/" | relative_url }}">
@@ -21,11 +23,11 @@
       <button class="nav-toggle" aria-label="メニュー" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
         <a href="{{ "/" | relative_url }}#themes">研究テーマ</a>
-        <a href="{{ "/" | relative_url }}#cv">略歴</a>
-        <a href="{{ "/works/" | relative_url }}"{% if p contains 'works' %} class="active"{% endif %}>業績</a>
-        <a href="{{ "/funds/" | relative_url }}"{% if p contains 'funds' %} class="active"{% endif %}>研究資金</a>
+        <a href="{{ "/works/" | relative_url }}"{% if p contains 'works' %} class="active" aria-current="page"{% endif %}>業績</a>
+        <a href="{{ "/funds/" | relative_url }}"{% if p contains 'funds' %} class="active" aria-current="page"{% endif %}>研究資金</a>
+        <a href="{{ "/cv/" | relative_url }}"{% if p == '/cv/' %} class="active" aria-current="page"{% endif %}>略歴・活動</a>
         <a href="{{ "/" | relative_url }}#contact">連絡先</a>
-        <a class="pill" href="{{ "/about-en/" | relative_url }}">EN</a>
+        <a class="pill" href="{{ alt | relative_url }}" lang="en" hreflang="en">EN</a>
       </div>
     {%- endif -%}
   </nav>

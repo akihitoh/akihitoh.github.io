@@ -1,20 +1,30 @@
 # 受賞・学会活動・特許・メディア報道（researchmap より）
-# ホームの「略歴」セクションで表示。新しい順に並べる。
+# 日本語は略歴ページ /cv/、英語（en_ で始まるキー）は /about-en/ で表示。新しい順に並べる。
+# 期間は年度表記（例: 2021年4月–2025年3月 → 2021–2024年度）
 awards:
-  - { when: "2025年6月", title: "学会活動貢献賞", org: "情報処理学会" }
-  - { when: "2024年6月", title: "特選論文", org: "情報処理学会", note: "Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, \"Anomaly Detection of Building Structure from Incomplete Point Cloud Obtained by UAV\"" }
+  - when: "2025年6月"
+    en_when: "Jun 2025"
+    title: "学会活動貢献賞"
+    en_title: "IPSJ Activity Contribution Award (学会活動貢献賞)"
+    org: "情報処理学会"
+  - when: "2024年6月"
+    en_when: "Jun 2024"
+    title: "特選論文"
+    en_title: "IPSJ Specially Selected Paper"
+    org: "情報処理学会"
+    note: "Ayumu Harada, Akihito Hiromori, Hirozumi Yamaguchi, \"Anomaly Detection of Building Structure from Incomplete Point Cloud Obtained by UAV\", Journal of Information Processing"
 
 committees:
-  - { when: "2021年4月–2025年3月", title: "モバイルコンピューティングと新社会システム研究会 運営委員会 幹事", org: "情報処理学会" }
-  - { when: "2019年4月–2023年3月", title: "論文誌コンシューマ・デバイス＆システム編集委員会 幹事", org: "情報処理学会" }
-  - { when: "2017年4月–2021年3月", title: "マルチメディア通信と分散処理研究会 運営委員会 幹事", org: "情報処理学会" }
-  - { when: "2014年4月–2018年3月", title: "論文誌コンシューマ・デバイス＆システム編集委員会 委員", org: "情報処理学会" }
-  - { when: "2014年4月–2018年3月", title: "コンシューマ・デバイス＆システム研究会 運営委員会 運営委員", org: "情報処理学会" }
-  - { when: "2011年4月–2015年3月", title: "マルチメディア通信と分散処理研究会 運営委員会 運営委員", org: "情報処理学会" }
-  - { when: "2010年4月–2014年3月", title: "学会論文誌運営委員会 運営委員", org: "情報処理学会" }
+  - { when: "2021–2024年度", en_when: "FY2021–2024", title: "モバイルコンピューティングと新社会システム研究会 運営委員会 幹事", en_title: "Secretary, Steering Committee, IPSJ SIG on Mobile Computing and Smart Society Systems (MBL)", org: "情報処理学会" }
+  - { when: "2019–2022年度", en_when: "FY2019–2022", title: "論文誌コンシューマ・デバイス＆システム編集委員会 幹事", en_title: "Secretary, Editorial Board, IPSJ Transactions on Consumer Devices & Systems", org: "情報処理学会" }
+  - { when: "2017–2020年度", en_when: "FY2017–2020", title: "マルチメディア通信と分散処理研究会 運営委員会 幹事", en_title: "Secretary, Steering Committee, IPSJ SIG on Distributed Processing System (DPS)", org: "情報処理学会" }
+  - { when: "2014–2017年度", en_when: "FY2014–2017", title: "論文誌コンシューマ・デバイス＆システム編集委員会 委員", en_title: "Member, Editorial Board, IPSJ Transactions on Consumer Devices & Systems", org: "情報処理学会" }
+  - { when: "2014–2017年度", en_when: "FY2014–2017", title: "コンシューマ・デバイス＆システム研究会 運営委員会 運営委員", en_title: "Member, Steering Committee, IPSJ SIG on Consumer Devices & Systems (CDS)", org: "情報処理学会" }
+  - { when: "2011–2014年度", en_when: "FY2011–2014", title: "マルチメディア通信と分散処理研究会 運営委員会 運営委員", en_title: "Member, Steering Committee, IPSJ SIG on Distributed Processing System (DPS)", org: "情報処理学会" }
+  - { when: "2010–2013年度", en_when: "FY2010–2013", title: "学会論文誌運営委員会 運営委員", en_title: "Member, Journal Steering Committee, IPSJ", org: "情報処理学会" }
 
 memberships:
-  - { when: "1999年–", title: "情報処理学会" }
+  - { when: "1999年–", en_when: "1999–", title: "情報処理学会", en_title: "Information Processing Society of Japan (IPSJ)" }
 
 patents:
   - { when: "2019年12月", title: "危険性判定装置、危険性判定方法、及びプログラム", number: "特願2019-218165", applicant: "KDDI株式会社、国立大学法人大阪大学" }

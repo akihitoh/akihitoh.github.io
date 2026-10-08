@@ -16,8 +16,8 @@ title: About
       I design and evaluate <strong>information systems that account for human mobility</strong>, combining real-world sensing of people, vehicles and environments with simulation, optimization and machine learning. Current topics include neural surrogate models for simulation, smart-city optimization, 3D point-cloud sensing and disaster-resilient networking.
     </p>
     <div class="cta">
-      <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">View publications <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="https://researchmap.jp/ahiromori" target="_blank" rel="noopener">researchmap ↗</a>
+      <a class="btn btn-primary" href="{{ "/en/publications/" | relative_url }}">View publications <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#cv">CV</a>
     </div>
   </div>
 
@@ -39,13 +39,14 @@ title: About
     <div class="band-head en">
       <div>
         <div class="eyebrow">Research Interests</div>
-        <h2>Eight research areas</h2>
+        <h2>Research areas</h2>
       </div>
     </div>
     <div class="theme-grid en">
       {%- for t in site.data.research -%}
       <article class="theme-card">
         <span class="num">{{ t.num }}</span>
+        {% if forloop.first %}<span class="focus">Current focus</span>{% endif %}
         <h3>{{ t.en_title }}</h3>
         <p>{{ t.en_desc }}</p>
       </article>
@@ -74,12 +75,33 @@ title: About
         <div class="cv-links">
           <div class="contact-label">Links</div>
           <div class="rows">
-            <a href="{{ "/works/" | relative_url }}">Publications <span>→</span></a>
-            <a href="https://researchmap.jp/ahiromori" target="_blank" rel="noopener">researchmap <span>↗</span></a>
-            <a href="https://nrid.nii.ac.jp/ja/nrid/1000090506544/" target="_blank" rel="noopener">KAKEN database <span>↗</span></a>
-            <a href="{{ "/funds/" | relative_url }}">Research funding <span>→</span></a>
+            <a href="{{ "/en/publications/" | relative_url }}">Publications <span>→</span></a>
+            <a href="https://researchmap.jp/ahiromori?lang=en" target="_blank" rel="noopener">researchmap <span>↗</span></a>
+            <a href="https://nrid.nii.ac.jp/en/nrid/1000090506544/" target="_blank" rel="noopener">KAKEN database <span>↗</span></a>
+            <a href="{{ "/en/funding/" | relative_url }}">Research funding <span>→</span></a>
           </div>
         </div>
+      </div>
+    </div>
+
+    {%- assign act = site.data.activities -%}
+    <div class="cv-grid cv-more">
+      <div class="cv-block">
+        <div class="eyebrow">Recognition</div>
+        <h2>Awards</h2>
+        {%- for a in act.awards -%}
+        <div class="cv-line"><span class="when">{{ a.en_when }}</span><span class="what">{{ a.en_title }}{% if a.note %}<span class="sub">{{ a.note }}</span>{% endif %}</span></div>
+        {%- endfor -%}
+      </div>
+      <div class="cv-block">
+        <div class="eyebrow">Service</div>
+        <h2>Professional Service</h2>
+        {%- for c in act.committees -%}
+        <div class="cv-line"><span class="when">{{ c.en_when }}</span><span class="what">{{ c.en_title }}</span></div>
+        {%- endfor -%}
+        {%- for m in act.memberships -%}
+        <div class="cv-line"><span class="when">{{ m.en_when }}</span><span class="what">Member, {{ m.en_title }}</span></div>
+        {%- endfor -%}
       </div>
     </div>
   </div>

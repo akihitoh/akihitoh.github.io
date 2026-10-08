@@ -8,6 +8,18 @@ plugins:
 title: 廣森 聡仁 (Akihito Hiromori)
 description: "大阪大学 D3センター 准教授 廣森聡仁の研究紹介・業績・研究資金。"
 lang: ja
+url: "https://akihitoh.github.io"
+
+# SNS 共有用の画像（jekyll-seo-tag が og:image / twitter:image に使う）
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og.png
+
+twitter:
+  card: summary_large_image
+
 show_downloads: false
 
 # ナビゲーションは _includes/header.html で独自定義（minima の header_pages は未使用）

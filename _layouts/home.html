@@ -15,7 +15,7 @@ layout: default
     </p>
     <div class="cta">
       <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">研究業績を見る <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#cv">略歴</a>
+      <a class="btn btn-ghost" href="{{ "/cv/" | relative_url }}">略歴・活動</a>
     </div>
   </div>
 
@@ -39,7 +39,7 @@ layout: default
         <div class="eyebrow">Research</div>
         <h2>研究テーマ</h2>
       </div>
-      <p class="desc">実世界のセンシングと、シミュレーション・最適化・機械学習をつなぐ8つのテーマに取り組んでいます。</p>
+      <p class="desc">実世界のセンシングと、シミュレーション・最適化・機械学習をつなぐテーマに取り組んでいます。先頭が現在の重点テーマです。</p>
     </div>
     <div class="theme-grid">
       {%- for t in site.data.research -%}
@@ -47,6 +47,7 @@ layout: default
         <div class="card-inner">
           <span class="num">{{ t.num }}</span>
           <div>
+            {% if forloop.first %}<span class="focus">現在の重点テーマ</span>{% endif %}
             <h3>{{ t.ja }}</h3>
             <div class="en-label">{{ t.en }}</div>
             <div class="tags">
@@ -60,62 +61,7 @@ layout: default
   </div>
 </section>
 
-<section id="cv" class="band">
-  <div class="inner">
-    <div class="band-head">
-      <div>
-        <div class="eyebrow">Career</div>
-        <h2>略歴・活動</h2>
-      </div>
-    </div>
-    <div class="cv-grid">
-      <div class="cv-block">
-        <h3 class="cv-title">職歴</h3>
-        {%- for a in site.data.cv.appointments -%}
-        <div class="cv-line{% if a.current %} recent{% endif %}"><span class="when">{{ a.ja_when }}</span><span class="what">{{ a.ja }}</span></div>
-        {%- endfor -%}
-      </div>
-      <div class="cv-block">
-        <h3 class="cv-title">学歴・学位</h3>
-        {%- for e in site.data.cv.education -%}
-        <div class="cv-line{% if e.current %} recent{% endif %}"><span class="when">{{ e.ja_when }}</span><span class="what">{{ e.ja }}</span></div>
-        {%- endfor -%}
-      </div>
-    </div>
-    {%- assign act = site.data.activities -%}
-    <div class="cv-grid cv-more">
-      <div class="cv-block">
-        <h3 class="cv-title">受賞</h3>
-        {%- for a in act.awards -%}
-        <div class="cv-line"><span class="when">{{ a.when }}</span><span class="what">{{ a.org }} {{ a.title }}{% if a.note %}<span class="sub">{{ a.note }}</span>{% endif %}</span></div>
-        {%- endfor -%}
-
-        <h3 class="cv-title">特許</h3>
-        {%- for p in act.patents -%}
-        <div class="cv-line"><span class="when">{{ p.when }}</span><span class="what">{{ p.title }}<span class="sub">{{ p.number }}・出願人 {{ p.applicant }}</span></span></div>
-        {%- endfor -%}
-
-        <h3 class="cv-title">メディア報道</h3>
-        {%- for m in act.media -%}
-        <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}<span class="sub">{{ m.org }}</span></span></div>
-        {%- endfor -%}
-      </div>
-      <div class="cv-block">
-        <h3 class="cv-title">学会活動</h3>
-        {%- for c in act.committees -%}
-        <div class="cv-line"><span class="when">{{ c.when }}</span><span class="what">{{ c.org }} {{ c.title }}</span></div>
-        {%- endfor -%}
-
-        <h3 class="cv-title">所属学会</h3>
-        {%- for m in act.memberships -%}
-        <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}</span></div>
-        {%- endfor -%}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="band tint">
+<section id="contact" class="band">
   <div class="inner">
     <div class="band-head">
       <div>

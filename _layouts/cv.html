@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<div class="page-title">
+  <div class="eyebrow">Career</div>
+  <h1>略歴・活動</h1>
+  <p>職歴・学歴に加え、受賞、特許、学会活動、メディア報道をまとめています。</p>
+</div>
+
+<div class="pub-main cv-page">
+  <div class="cv-grid">
+    <div class="cv-block">
+      <h2 class="cv-title">職歴</h2>
+      {%- for a in site.data.cv.appointments -%}
+      <div class="cv-line{% if a.current %} recent{% endif %}"><span class="when">{{ a.ja_when }}</span><span class="what">{{ a.ja }}</span></div>
+      {%- endfor -%}
+    </div>
+    <div class="cv-block">
+      <h2 class="cv-title">学歴・学位</h2>
+      {%- for e in site.data.cv.education -%}
+      <div class="cv-line{% if e.current %} recent{% endif %}"><span class="when">{{ e.ja_when }}</span><span class="what">{{ e.ja }}</span></div>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- assign act = site.data.activities -%}
+  <div class="cv-grid cv-more">
+    <div class="cv-block">
+      <h2 class="cv-title">受賞</h2>
+      {%- for a in act.awards -%}
+      <div class="cv-line"><span class="when">{{ a.when }}</span><span class="what">{{ a.org }} {{ a.title }}{% if a.note %}<span class="sub">{{ a.note }}</span>{% endif %}</span></div>
+      {%- endfor -%}
+
+      <h2 class="cv-title">特許</h2>
+      {%- for p in act.patents -%}
+      <div class="cv-line"><span class="when">{{ p.when }}</span><span class="what">{{ p.title }}<span class="sub">{{ p.number }}・出願人 {{ p.applicant }}</span></span></div>
+      {%- endfor -%}
+
+      <h2 class="cv-title">メディア報道</h2>
+      {%- for m in act.media -%}
+      <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}<span class="sub">{{ m.org }}</span></span></div>
+      {%- endfor -%}
+    </div>
+    <div class="cv-block">
+      <h2 class="cv-title">学会活動</h2>
+      {%- for c in act.committees -%}
+      <div class="cv-line"><span class="when">{{ c.when }}</span><span class="what">{{ c.org }} {{ c.title }}</span></div>
+      {%- endfor -%}
+
+      <h2 class="cv-title">所属学会</h2>
+      {%- for m in act.memberships -%}
+      <div class="cv-line"><span class="when">{{ m.when }}</span><span class="what">{{ m.title }}</span></div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

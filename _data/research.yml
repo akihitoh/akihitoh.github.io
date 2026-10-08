@@ -1,4 +1,5 @@
 # 研究テーマ（ホーム日本語 + About English で共用）
+# 先頭（01）を重点テーマとして全幅で表示する
 # ja: 日本語タイトル / en: 英語ラベル / tags: 日本語タグ / en_desc: 英語説明文
 - num: "01"
   ja: "ニューラルサロゲートによるシミュレーションの高速化"
@@ -15,9 +16,9 @@
 - num: "03"
   ja: "3次元点群とUAVによる空間・人物センシング"
   en: "3D Point Cloud & UAV Sensing"
-  tags: ["高密度群衆トラッキング", "UAV点群からの建物認識", "ミリ波レーダー人物検出"]
+  tags: ["高密度群衆トラッキング", "歩行者の移動軌跡推定", "UAV点群からの建物認識", "ミリ波レーダー人物検出"]
   en_title: "3D Point Cloud & UAV Sensing"
-  en_desc: "Dense-crowd tracking & counting, building recognition from UAV point clouds, mmWave person detection under occlusion."
+  en_desc: "Dense-crowd tracking & counting, pedestrian trajectory estimation, building recognition from UAV point clouds, mmWave person detection under occlusion."
 - num: "04"
   ja: "車両・交通センシングによる安全支援"
   en: "Vehicular & Traffic Sensing"
@@ -33,18 +34,12 @@
 - num: "06"
   ja: "大規模ネットワーク解析・シミュレーション"
   en: "Large-Scale Network Analysis"
-  tags: ["Network Calculusによる遅延評価", "無線の相互干渉調停", "路側機・基地局群の制御"]
+  tags: ["Network Calculusによる遅延評価", "無線の相互干渉調停", "路側機・基地局群の制御", "モビリティモデル"]
   en_title: "Large-Scale Network Analysis"
-  en_desc: "Network-Calculus delay evaluation of in-vehicle networks, wireless interference coordination, RSU/base-station scheduling."
+  en_desc: "Network-Calculus delay evaluation of in-vehicle networks, wireless interference coordination, RSU/base-station scheduling, mobility models for network simulation."
 - num: "07"
   ja: "人の行動に基づくビルのエネルギー制御"
   en: "Human-Aware Building Energy"
   tags: ["生活ノウハウのモデル化", "温熱快適性を考慮した空調制御", "タスク・アンビエント照明"]
   en_title: "Human-Aware Building Energy"
   en_desc: "Modeling daily-living know-how, thermal-comfort-aware HVAC control, task/ambient lighting."
-- num: "08"
-  ja: "人の動きを考慮したシステム設計"
-  en: "Mobility-Aware System Design"
-  tags: ["人流・歩行者のトラッキング", "モビリティモデル", "群衆センシング"]
-  en_title: "Mobility-Aware System Design"
-  en_desc: "Human/pedestrian tracking, mobility models, crowd sensing."
