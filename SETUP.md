@@ -1,69 +1,46 @@
-# デザイン反映手順（GitHub Pages / Jekyll + minima）
+# サイト構成と更新手順（Next.js + Astryx）
 
-このフォルダ `jekyll/` の中身は、`Home.dc.html` のデザインを **jekyll/minima を上書きする形**で
-実サイト（akihitoh.github.io）に反映するための一式です。リポジトリのルートに **同じパスで**
-上書きコピーしてください（minima は同名ファイルがあればそちらを優先します）。
+## 構成
 
-## コピーするファイルと配置先
+- **フレームワーク**: Next.js（App Router）を静的書き出し（`output: "export"`）して GitHub Pages で配信
+- **UI**: [Astryx](https://github.com/meta/astryx)（Meta 製デザインシステム、MIT）。テーマは `@astryxdesign/theme-neutral`
+- **デプロイ**: `main` への push で GitHub Actions（`.github/workflows/deploy.yml`）がビルドして公開
+  - リポジトリの Settings → Pages → Source は「GitHub Actions」にしておく
+- **ローカル確認**: `docker compose up` → http://localhost:4001（ファイル変更は自動反映）
 
 ```
-jekyll/_config.yml            → _config.yml        （既存を置換・後述の差分のみでも可）
-jekyll/index.html             → index.html         （新規・トップ。README.md より優先される）
-jekyll/works.html             → works.html         （既存 works.md は削除してよい）
-jekyll/funds.html             → funds.html         （既存 funds.md は削除してよい）
-jekyll/about-en.html          → about-en.html      （既存 about-en.md は削除してよい）
-
-jekyll/_includes/head.html    → _includes/head.html
-jekyll/_includes/header.html  → _includes/header.html
-jekyll/_includes/footer.html  → _includes/footer.html
-
-jekyll/_layouts/default.html  → _layouts/default.html
-jekyll/_layouts/home.html     → _layouts/home.html
-jekyll/_layouts/works.html    → _layouts/works.html
-jekyll/_layouts/funds.html    → _layouts/funds.html
-jekyll/_layouts/about-en.html → _layouts/about-en.html
-
-jekyll/_data/research.yml     → _data/research.yml
-jekyll/_data/funds.yml        → _data/funds.yml
-jekyll/_data/cv.yml           → _data/cv.yml
-
-jekyll/assets/css/style.css              → assets/css/site.css
-jekyll/assets/js/publications-data.js    → assets/js/publications-data.js
-jekyll/assets/js/works.js                → assets/js/works.js
-jekyll/assets/img/hiromori.png           → assets/img/hiromori.png   （既存と同じ）
-jekyll/assets/img/KAKENHIlogoS.jpg       → assets/img/KAKENHIlogoS.jpg（既存と同じ）
+data/                 コンテンツ（YAML と業績データ）
+  research.yml        研究テーマ（ホーム日本語・About English で共用）
+  cv.yml              職歴・学歴
+  activities.yml      受賞・学会活動・所属学会・特許・メディア報道
+  funds.yml           研究資金（pi: 研究代表者 / co: 研究分担者）
+  publications.ts     研究業績
+public/               そのまま公開される静的ファイル（画像・Search Console 確認ファイル）
+src/app/(ja)/         日本語ページ（/, /works/, /funds/, /cv/）
+src/app/(en)/         英語ページ（/about-en/, /en/publications/, /en/funding/）
+src/components/       表示部品（Astryx コンポーネントで構成）
+src/lib/site.ts       ナビゲーション・日英ページの対応表・メタデータ生成
 ```
 
-## コンテンツの持ち方（今後の更新箇所）
+## よくある更新
 
-デザインとコンテンツを分離しました。文章・データの更新は基本 `_data/*.yml` を編集するだけです。
+- **業績の追加**: `data/publications.ts` の該当カテゴリ・年代の `items` 先頭に 1 行追加
+- **研究資金の追加**: `data/funds.yml` に追記（課題番号と KAKEN のリンクを含める）
+- **略歴・受賞・学会活動**: `data/cv.yml` / `data/activities.yml`
+- **トップの紹介文**: `src/components/ProfileHero.tsx` の `COPY`
 
-- **研究テーマ** … `_data/research.yml`（日本語トップと英語Aboutで共用。日本語＝`ja`/`tags`、英語＝`en_title`/`en_desc`）
-- **外部研究資金** … `_data/funds.yml`（`pi:` 研究代表者 / `co:` 研究分担者）
-- **経歴・学歴(英語)** … `_data/cv.yml`
-- **研究業績** … `assets/js/publications-data.js`
-  - カテゴリ（`journal` / `intl` / `domestic`）→ 年代グループ → 各エントリ（引用文字列）の配列。
-  - **新しい業績は各 `items:` 配列の先頭に1行追加**するだけ。検索・カテゴリ絞り込み・年代折りたたみは自動。
-- トップのプロフィール文・連絡先など単発の文言は各 `_layouts/*.html` に直接記載しています。
-
-> 注: 旧 `works.md` は業績の唯一の出典ではなくなります。業績は `publications-data.js` が出典です。
-> どちらか一方に統一してください（このセットは JS データ側に統一しています）。
-
-## ナビゲーションについて
-
-ナビは `_includes/header.html` で独自定義しています（`page.lang == 'en'` で英語ナビに切替）。
-そのため **`_config.yml` の `header_pages` と `_data/navigation.yml` の二重管理は不要**になりました。
-`_data/navigation.yml` は使われないので残しても消しても構いません。
-
-## 確認と公開
+## コマンド
 
 ```bash
-docker compose up          # http://localhost:4001 で確認
-git add -A && git commit -m "Apply new design (minima override)"
-git push origin main       # GitHub Pages が自動ビルド → https://akihitoh.github.io/
+npm run dev      # 開発サーバー（Docker を使わない場合）
+npm run lint     # 型チェック
+npm run build    # 静的書き出し（out/ に出力）
+npm run astryx -- component Button   # Astryx コンポーネントの API を調べる
 ```
 
 ## 補足
-- フォントは Google Fonts（Noto Serif JP 500/700・Instrument Serif）を `_includes/head.html` で読込。本文は端末標準のゴシック体。デザインは styles.refero.design を参考にした白地・墨色・角丸パネル・ピル型 UI。
-- 配色・余白・コンポーネントは全て `assets/css/site.css` 冒頭の `:root` 変数で一元管理。
-- minima 本体は撤去していません。SEO(`jekyll-seo-tag`)・sitemap 等の下回りはそのまま活用します。
+
+- 日本語・英語で `<html lang>` を切り替えるため、ルートレイアウトを `(ja)` / `(en)` のルートグループに分けている
+- 404 ページは `src/app/global-not-found.tsx`
+- 欧文フォント Figtree は `next/font` でビルド時に取得して自己ホスト。和文は端末標準のゴシック体
+- 色は Astryx のトークン（`--color-*`）経由で指定しているため、OS のダークモードにも追従する

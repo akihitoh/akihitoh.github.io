@@ -1,0 +1,91 @@
+/* Astryx の CSS（順序が重要: reset → コンポーネント → テーマ） */
+@import "@astryxdesign/core/reset.css";
+@import "@astryxdesign/core/astryx.css";
+@import "@astryxdesign/theme-neutral/theme.css";
+
+/* 欧文は Figtree（next/font で自己ホスト）、和文は端末標準のゴシック体 */
+[data-astryx-theme] {
+  --font-family-body: var(--font-figtree), -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  --font-family-heading: var(--font-family-body);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--color-background-body);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  -webkit-font-smoothing: antialiased;
+}
+/* 見出しは文節単位で改行し、仮名をプロポーショナル詰め */
+h1, h2, h3 { word-break: auto-phrase; text-wrap: pretty; font-feature-settings: "palt"; }
+
+.container { max-width: 1120px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 32px); }
+.page { padding-block: clamp(32px, 6vw, 56px) clamp(56px, 8vw, 96px); }
+
+/* ヘッダー: デスクトップは横並びナビ、860px 以下はドロワー */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--color-background-surface); border-bottom: 1px solid var(--color-border); }
+.nav-desktop { display: flex; align-items: center; gap: 4px; }
+.nav-mobile { display: none; }
+@media (max-width: 860px) {
+  .nav-desktop { display: none; }
+  .nav-mobile { display: flex; }
+}
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--color-text-primary); color: var(--color-background-surface);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
+}
+
+/* 業績リスト: 題目と本人名の強調 */
+.cite { color: var(--color-text-secondary); line-height: 1.7; }
+.cite .ttl { color: var(--color-text-primary); font-weight: 600; }
+.cite .me { color: var(--color-text-primary); font-weight: 600; }
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-list li { display: flex; gap: 14px; padding-block: 12px; border-top: 1px solid var(--color-border); }
+.pub-list li:first-child { border-top: none; }
+.pub-list .n { min-width: 24px; text-align: end; color: var(--color-text-secondary); font-variant-numeric: tabular-nums; font-size: var(--font-size-sm); padding-top: 2px; }
+
+/* 年代の折りたたみ見出し */
+.era-trigger { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 6px 8px 6px 0; }
+/* カテゴリ切り替えは狭い画面で横スクロール（ラベルを省略させない） */
+.seg-scroll { max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.seg-scroll::-webkit-scrollbar { display: none; }
+.seg-scroll > * { width: max-content; max-width: none; }
+
+/* 業績ツールバー（デスクトップのみ追従） */
+.pub-toolbar { position: sticky; top: 57px; z-index: 40; background: var(--color-background-body); padding-block: 12px; }
+@media (max-width: 860px) { .pub-toolbar { position: static; } }
+
+/* 略歴の年月列 */
+.cv-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; padding-block: 10px; border-top: 1px solid var(--color-border); }
+.cv-row:first-child { border-top: none; }
+@media (max-width: 520px) { .cv-row { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+/* 主要情報（ホーム）: 3 列 → モバイルで縦積み */
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.facts > div { padding: 16px 20px; border-inline-start: 1px solid var(--color-border); }
+.facts > div:first-child { border-inline-start: none; }
+@media (max-width: 860px) {
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .facts > div { border-inline-start: none; border-top: 1px solid var(--color-border); }
+  .facts > div:first-child { border-top: none; }
+}
+
+/* 重点テーマは全幅 */
+.theme-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.theme-grid > :first-child { grid-column: 1 / -1; }
+@media (max-width: 1000px) { .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .theme-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 860px) { .two-col { grid-template-columns: minmax(0, 1fr); } }
+
+.lede { max-width: 42em; }
+.mail-at { color: var(--color-text-secondary); padding-inline: 2px; }
+
+@media print {
+  .site-header, .pub-toolbar, .site-footer, .no-print { display: none !important; }
+}

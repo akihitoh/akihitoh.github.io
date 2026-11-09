@@ -4,57 +4,53 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-Jekyll-based academic portfolio website for Dr. Akihito Hiromori (廣森 聡仁), Associate Professor at Osaka University D3 Center and Graduate School of Information Science and Technology. Hosted on GitHub Pages via `remote_theme: jekyll/minima`.
+Academic portfolio website for Dr. Akihito Hiromori (廣森 聡仁), Associate Professor at Osaka University D3 Center and Graduate School of Information Science and Technology. Next.js（App Router）を静的書き出しし、GitHub Actions 経由で GitHub Pages に公開する。UI は Astryx（`@astryxdesign/core` + `@astryxdesign/theme-neutral`）。
 
 ## Development Workflow
 
-ローカルに Ruby/Jekyll 環境は持たない。GitHub Pages が Jekyll ビルドを行う。
-
 ```bash
-# ローカルプレビュー（Docker + github-pages gem で GitHub Pages と同一環境）
+# ローカルプレビュー（Node コンテナで next dev）
 docker compose up
 # http://localhost:4001 で確認（ファイル変更は自動反映）
 
-# 変更を push すると GitHub Pages が自動ビルド・公開
+npm run lint     # 型チェック（tsc --noEmit）
+npm run build    # 静的書き出し（out/）。push 前に通ることを確認する
+
+# main に push すると .github/workflows/deploy.yml がビルド・公開
 git push origin main
 # https://akihitoh.github.io/ で確認
 ```
 
 ## Site Architecture
 
-カスタムデザイン（minima を `_layouts/`・`_includes/` で全面上書き）。スタイルは `assets/css/site.css`（`style.css` は minima の `style.scss` と出力先が衝突するため使わない）。ページ本体は薄い front matter のみで、実体はレイアウトとデータファイルに分離されている。
+- **ルート**: `src/app/(ja)/`（`/`, `/works/`, `/funds/`, `/cv/`）と `src/app/(en)/`（`/about-en/`, `/en/publications/`, `/en/funding/`）。`<html lang>` を分けるためルートレイアウトが 2 つある。404 は `src/app/global-not-found.tsx`、サイトマップは `src/app/sitemap.ts`
+- **ページ本体**（`page.tsx`）はサーバー側でデータを読み、表示は `src/components/` のクライアントコンポーネント（`"use client"`）が Astryx で描画する。Astryx の多くのコンポーネントは client 専用なので、ページから直接使う場合も client コンポーネント経由にする
+- **共通設定** `src/lib/site.ts`: ナビゲーション（`NAV`）、日英ページの対応表（`ALT_PATHS`。言語切り替えと hreflang に使用）、`pageMetadata()`（title / canonical / OGP）
+- **スタイル**: `src/app/globals.css`。色は Astryx のトークン（`--color-text-secondary` など）を使い、ダークモードに追従させる。独自の色をハードコードしない
+- **Astryx の API 確認**: `npm run astryx -- component <Name>`（props 一覧）
 
-**Navigation**: `_includes/header.html` に直接定義（日本語/英語で分岐）。`_config.yml` の `header_pages` はテーマ側フォールバックとして残置、`_data/navigation.yml` は未使用。
+**Data Files**（`data/`）:
+- `research.yml` — 研究テーマ（ホーム日本語 + About English で共用。先頭が重点テーマで全幅表示）
+- `funds.yml` — 研究資金（`pi`: 研究代表者 / `co`: 研究分担者）。`en_title` は KAKEN の英語題目、英語題目がない課題は和訳し `en_translated: true`
+- `cv.yml` — 略歴（appointments / education。日本語 `ja_when`/`ja` は `/cv/`、英語 `when`/`en` は About English）
+- `activities.yml` — 受賞・学会活動（委員歴）・所属学会・特許・メディア報道（`en_` キーは About English）
+- `publications.ts` — 研究業績（業績ページで検索・絞り込み）
+- 読み込みは `src/lib/data.ts`、型は `src/lib/types.ts`
 
-**Content Pages**（front matter のみ。実体は対応する layout）:
-- `index.html` — トップページ（`layout: home`。研究テーマは `_data/research.yml`。先頭テーマを重点テーマとして全幅表示）
-- `works.html` → `/works/` — 業績一覧（`layout: works`。データは `assets/js/publications-data.js`、描画は `assets/js/works.js`）
-- `funds.html` → `/funds/` — 研究資金（`layout: funds`。データは `_data/funds.yml` の `pi`/`co`）
-- `cv.html` → `/cv/` — 略歴・活動（`layout: cv`。データは `_data/cv.yml` と `_data/activities.yml`）
-- `en/publications.html` → `/en/publications/`、`en/funding.html` → `/en/funding/` — 英語版（`lang: en` で works / funds レイアウトを共用）
-- 各ページの `alt_url` に対応する他言語ページを書く（言語切り替えボタンと hreflang に使用）
-- `about-en.html` → `/about-en/` — English profile（`layout: about-en`。データは `_data/cv.yml`・`_data/activities.yml`・`_data/research.yml`）
-
-**Data Files** (`_data/`):
-- `research.yml` — 研究テーマ（ホーム日本語 + About English で共用）
-- `funds.yml` — 研究資金（`pi`: 研究代表者 / `co`: 研究分担者）
-- `cv.yml` — 略歴（appointments / education。日本語 `ja_when`/`ja` は `/cv/`、英語 `when`/`en` は About English で使用）
-- `activities.yml` — 受賞・学会活動（委員歴）・所属学会・特許・メディア報道（日本語は `/cv/`、`en_` キーは About English で表示）
-- `funds.yml` の `en_title` は KAKEN の英語題目。英語題目がない課題は和訳し `en_translated: true`
-- SNS 共有画像は `assets/img/og.png`（`_config.yml` の `defaults` で全ページに設定）
+**Static Files**（`public/`）: 画像（`public/assets/img/`。SNS 共有画像 `og.png`、`favicon.svg`）と Search Console 確認ファイル
 
 **Non-published Files**:
-- `README.md` — リポジトリ説明用（`exclude` 済み、サイトには出ない）
-- `SETUP.md` — デザイン反映手順メモ（`exclude` 済み）
-- `_preview/` — デザインプレビュー（アンダースコア始まりのため非公開）
-- `homepage/` — 旧サイトのアーカイブ（`exclude` 済み。通常は編集不要）
+- `README.md` — リポジトリ説明用
+- `SETUP.md` — 構成と更新手順のメモ
+- `_preview/` — 旧デザインのプレビュー
+- `homepage/` — 旧サイトのアーカイブ（通常は編集不要）
 
 ## Content Guidelines
 
 - Primary language: Japanese（技術用語は英語のまま）
-- 業績の追加は `assets/js/publications-data.js` の該当カテゴリ（journal / intl / domestic）の該当 era グループ（5年単位: `2025–`, `2020–2024`, …）先頭に追加
-  - DOI がある場合は `{ c: "引用文字列", doi: "10.xxxx/..." }`（引用文字列はバッククォートで囲む） の形で書く（DOI ボタンが付く）
+- 業績の追加は `data/publications.ts` の該当カテゴリ（journal / intl / domestic）の該当 era グループ（5年単位: `2025–`, `2020–2024`, …）先頭に追加
+  - DOI がある場合は ``{ c: `引用文字列`, doi: "10.xxxx/..." }``（引用文字列はバッククォートで囲む）の形で書く（DOI バッジが付く）
   - 日本語論文: `著者, "タイトル", 論文誌名, Vol.XX, No.X, pp.XX-XX, 年月.`
   - 英語論文: `Authors, "Title", Conference/Journal, pp.XX-XX, Month Year.`
-- 研究資金の追加は `_data/funds.yml`: KAKENHI 課題番号と kaken.nii.ac.jp リンクを含める
+- 研究資金の追加は `data/funds.yml`: KAKENHI 課題番号と kaken.nii.ac.jp リンクを含める
 - Contact email uses "atmark" instead of "@" for spam prevention

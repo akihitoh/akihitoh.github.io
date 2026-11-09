@@ -27,3 +27,10 @@ homepage/
 .claude/
 .letta/
 plans/
+
+# Next.js
+.next/
+out/
+node_modules/
+next-env.d.ts
+*.tsbuildinfo

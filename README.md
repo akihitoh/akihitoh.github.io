@@ -1,10 +1,10 @@
-<img src="assets/img/hiromori.png" alt="廣森 聡仁" width="200">
+<img src="public/assets/img/hiromori.png" alt="廣森 聡仁" width="200">
 
 ## 略歴
 - 大阪大学 D3センター 准教授
 - 大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授
 
-[English](about-en)
+[English](https://akihitoh.github.io/about-en/)
 
 ## 研究テーマ
 - **ニューラルネットワークによるシミュレーション代理（サロゲート）モデル**: 歩行者流制御施策の最適化、自動運転通信の性能評価、電波伝搬マップ、衛星フェーズドアレイのカバレッジ推定
