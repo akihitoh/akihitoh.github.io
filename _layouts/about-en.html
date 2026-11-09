@@ -4,37 +4,32 @@ lang: en
 title: About
 ---
 <section class="hero en">
-  <div>
-    <div class="eyebrow with-rule"><span class="rule"></span>The University of Osaka · D3 Center</div>
-    <h1>Akihito<br>Hiromori</h1>
-    <div class="sub">廣森 聡仁 &nbsp;·&nbsp; Ph.D. in Engineering</div>
-    <div class="titles">
-      <div><strong>Associate Professor</strong>, D3 Center, The University of Osaka</div>
-      <div class="dim">Associate Professor (concurrent), Dept. of Information Networking, Graduate School of Information Science and Technology</div>
-    </div>
-    <p class="lede">
-      I design and evaluate <strong>information systems that account for human mobility</strong>, combining real-world sensing of people, vehicles and environments with simulation, optimization and machine learning. Current topics include neural surrogate models for simulation, smart-city optimization, 3D point-cloud sensing and disaster-resilient networking.
-    </p>
-    <div class="cta">
-      <a class="btn btn-primary" href="{{ "/en/publications/" | relative_url }}">View publications <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#cv">CV</a>
-    </div>
+  <div class="portrait"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="Akihito Hiromori"></div>
+  <div class="badges">
+    <span class="badge">D3 Center</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>The University of Osaka</span>
   </div>
-
-  <aside>
-    <div class="portrait">
-      <div class="frame"></div>
-      <div class="pic"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="Akihito Hiromori"></div>
-    </div>
-    <dl class="facts">
-      <div class="row"><dt>Field</dt><dd>Information Networking<br>Mobile Computing</dd></div>
-      <div class="row"><dt>Email</dt><dd class="mail">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</dd></div>
-      <div class="row"><dt>At Osaka</dt><dd>Since April 2008</dd></div>
-    </dl>
-  </aside>
+  <h1>Akihito Hiromori</h1>
+  <div class="sub">廣森 聡仁 &nbsp;·&nbsp; Ph.D. in Engineering</div>
+  <div class="titles">
+    <div><strong>Associate Professor</strong>, D3 Center, The University of Osaka</div>
+    <div class="dim">Associate Professor (concurrent), Dept. of Information Networking, Graduate School of Information Science and Technology</div>
+  </div>
+  <p class="lede">
+    I design and evaluate <strong>information systems that account for human mobility</strong>, combining real-world sensing of people, vehicles and environments with simulation, optimization and machine learning. Current topics include neural surrogate models for simulation, smart-city optimization, 3D point-cloud sensing and disaster-resilient networking.
+  </p>
+  <div class="cta">
+    <a class="btn btn-primary" href="{{ "/en/publications/" | relative_url }}">View publications <span class="arr">→</span></a>
+    <a class="btn btn-ghost" href="#cv">CV</a>
+  </div>
+  <dl class="facts">
+    <div class="row"><dt>Field</dt><dd>Information Networking · Mobile Computing</dd></div>
+    <div class="row"><dt>Email</dt><dd class="mail">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</dd></div>
+    <div class="row"><dt>At Osaka</dt><dd>Since April 2008</dd></div>
+  </dl>
 </section>
 
-<section id="research" class="band tint">
+<section id="research" class="band">
   <div class="inner">
     <div class="band-head en">
       <div>
@@ -46,7 +41,7 @@ title: About
       {%- for t in site.data.research -%}
       <article class="theme-card">
         <span class="num">{{ t.num }}</span>
-        {% if forloop.first %}<span class="focus">Current focus</span>{% endif %}
+        {% if forloop.first %}<span class="focus"><span class="dot" aria-hidden="true"></span>Current focus</span>{% endif %}
         <h3>{{ t.en_title }}</h3>
         <p>{{ t.en_desc }}</p>
       </article>

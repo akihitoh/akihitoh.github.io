@@ -64,6 +64,6 @@ git push origin main       # GitHub Pages が自動ビルド → https://akihito
 ```
 
 ## 補足
-- フォントは Google Fonts（Zen Old Mincho / Zen Kaku Gothic New / Newsreader）を `_includes/head.html` で読込。
+- フォントは Google Fonts（Noto Serif JP 500/700・Instrument Serif）を `_includes/head.html` で読込。本文は端末標準のゴシック体。デザインは styles.refero.design を参考にした白地・墨色・角丸パネル・ピル型 UI。
 - 配色・余白・コンポーネントは全て `assets/css/site.css` 冒頭の `:root` 変数で一元管理。
 - minima 本体は撤去していません。SEO(`jekyll-seo-tag`)・sitemap 等の下回りはそのまま活用します。

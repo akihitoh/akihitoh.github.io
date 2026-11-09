@@ -2,37 +2,32 @@
 layout: default
 ---
 <section class="hero">
-  <div>
-    <div class="eyebrow with-rule"><span class="rule"></span>The University of Osaka · D3 Center</div>
-    <h1>廣森 聡仁</h1>
-    <div class="sub">Akihito Hiromori, Ph.D.</div>
-    <div class="titles">
-      <div>大阪大学 D3センター <strong>准教授</strong></div>
-      <div class="dim">大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授</div>
-    </div>
-    <p class="lede">
-      人・車両・環境の実世界センシングと、シミュレーション・最適化・機械学習を組み合わせ、<strong>人の動きを考慮した情報システム</strong>の設計と評価に取り組んでいます。近年はニューラルサロゲートによるシミュレーションの高速化、スマートシティにおける最適化、3次元点群センシング、災害時に強いネットワークを中心に研究しています。
-    </p>
-    <div class="cta">
-      <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">研究業績を見る <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="{{ "/cv/" | relative_url }}">略歴・活動</a>
-    </div>
+  <div class="portrait"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="廣森 聡仁"></div>
+  <div class="badges">
+    <span class="badge">D3 Center</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>The University of Osaka</span>
   </div>
-
-  <aside>
-    <div class="portrait">
-      <div class="frame"></div>
-      <div class="pic"><img src="{{ "/assets/img/hiromori.png" | relative_url }}" alt="廣森 聡仁"></div>
-    </div>
-    <dl class="facts">
-      <div class="row"><dt>専門分野</dt><dd>情報ネットワーク学<br>モバイルコンピューティング</dd></div>
-      <div class="row"><dt>学位</dt><dd>博士(工学)<br><span class="dim">大阪大学・2004年3月</span></dd></div>
-      <div class="row"><dt>在籍</dt><dd>大阪大学（2008年4月〜）</dd></div>
-    </dl>
-  </aside>
+  <h1>廣森 聡仁</h1>
+  <div class="sub">Akihito Hiromori, Ph.D.</div>
+  <div class="titles">
+    <div>大阪大学 D3センター <strong>准教授</strong></div>
+    <div class="dim">大阪大学 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授</div>
+  </div>
+  <p class="lede">
+    人・車両・環境の実世界センシングと、シミュレーション・最適化・機械学習を組み合わせ、<strong>人の動きを考慮した情報システム</strong>の設計と評価に取り組んでいます。近年はニューラルサロゲートによるシミュレーションの高速化、スマートシティにおける最適化、3次元点群センシング、災害時に強いネットワークを中心に研究しています。
+  </p>
+  <div class="cta">
+    <a class="btn btn-primary" href="{{ "/works/" | relative_url }}">研究業績を見る <span class="arr">→</span></a>
+    <a class="btn btn-ghost" href="{{ "/cv/" | relative_url }}">略歴・活動</a>
+  </div>
+  <dl class="facts">
+    <div class="row"><dt>専門分野</dt><dd>情報ネットワーク学・モバイルコンピューティング</dd></div>
+    <div class="row"><dt>学位</dt><dd>博士(工学) 大阪大学・2004年3月</dd></div>
+    <div class="row"><dt>在籍</dt><dd>大阪大学（2008年4月〜）</dd></div>
+  </dl>
 </section>
 
-<section id="themes" class="band tint">
+<section id="themes" class="band">
   <div class="inner">
     <div class="band-head">
       <div>
@@ -47,7 +42,7 @@ layout: default
         <div class="card-inner">
           <span class="num">{{ t.num }}</span>
           <div>
-            {% if forloop.first %}<span class="focus">現在の重点テーマ</span>{% endif %}
+            {% if forloop.first %}<span class="focus"><span class="dot" aria-hidden="true"></span>現在の重点テーマ</span>{% endif %}
             <h3>{{ t.ja }}</h3>
             <div class="en-label">{{ t.en }}</div>
             <div class="tags">
@@ -63,15 +58,10 @@ layout: default
 
 <section id="contact" class="band">
   <div class="inner">
-    <div class="band-head">
+    <div class="contact-panel">
       <div>
         <div class="eyebrow">Contact</div>
         <h2>連絡先・リンク</h2>
-      </div>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-label">Email</div>
         <div class="email">hiromori<span class="at">[at]</span>ist.osaka-u.ac.jp</div>
         <p class="contact-note">迷惑メール対策のため表記を変えています。<strong>[at]</strong> を <strong>@</strong> に置き換えて送信してください。</p>
       </div>

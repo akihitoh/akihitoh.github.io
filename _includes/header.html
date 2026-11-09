@@ -4,8 +4,8 @@
   <nav class="nav">
     {%- if page.lang == 'en' -%}
       <a class="brand en" href="{{ "/about-en/" | relative_url }}">
+        <span class="mark" aria-hidden="true">AH</span><span class="slash" aria-hidden="true">/</span>
         <span class="brand-jp">Akihito Hiromori</span>
-        <span class="brand-en">The University of Osaka</span>
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
@@ -17,8 +17,8 @@
       </div>
     {%- else -%}
       <a class="brand" href="{{ "/" | relative_url }}">
+        <span class="mark" aria-hidden="true">AH</span><span class="slash" aria-hidden="true">/</span>
         <span class="brand-jp">廣森 聡仁</span>
-        <span class="brand-en">Akihito Hiromori</span>
       </a>
       <button class="nav-toggle" aria-label="メニュー" aria-controls="navlinks" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('navlinks').classList.toggle('open'))"><span></span></button>
       <div class="nav-links" id="navlinks">
