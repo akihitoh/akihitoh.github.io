@@ -2,7 +2,7 @@
 import "server-only";
 import fs from "node:fs";
 import path from "node:path";
-import yaml from "js-yaml";
+import { load as parseYaml } from "js-yaml";
 import type { Activities, Cv, Funds, ResearchTheme } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -10,7 +10,7 @@ const DATA_DIR = path.join(process.cwd(), "data");
 function load<T>(name: string): T {
   const file = path.join(DATA_DIR, `${name}.yml`);
   try {
-    return yaml.load(fs.readFileSync(file, "utf8")) as T;
+    return parseYaml(fs.readFileSync(file, "utf8")) as T;
   } catch (err) {
     throw new Error(`データファイル ${file} の読み込みに失敗しました: ${(err as Error).message}`);
   }
