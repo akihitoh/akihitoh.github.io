@@ -1,5 +1,6 @@
 "use client";
 // ホーム・About English 共通のヒーロー。主役は研究内容で、名前は小さなプロフィール行に置く
+import { Fragment } from "react";
 import { Avatar } from "@astryxdesign/core/Avatar";
 import { Button } from "@astryxdesign/core/Button";
 import { Card } from "@astryxdesign/core/Card";
@@ -15,9 +16,9 @@ const COPY = {
     name: "廣森 聡仁",
     nameSub: "Akihito Hiromori, Ph.D.",
     role: "大阪大学 D3センター 准教授 · 大学院情報科学研究科 情報ネットワーク学専攻 (兼)准教授",
-    headline: "人の動きを考慮した情報システムの設計と評価",
+    headline: ["シミュレーションと機械学習による、", "大規模な社会システムの評価と最適化"],
     lede:
-      "人・車両・環境の実世界センシングと、シミュレーション・最適化・機械学習を組み合わせた研究に取り組んでいます。近年はニューラルサロゲートによるシミュレーションの高速化、スマートシティにおける最適化、3次元点群センシング、災害時に強いネットワークを中心に研究しています。",
+      "人の流れや交通、無線通信、衛星コンステレーションといった大規模なシステムを、シミュレーションと機械学習で評価・最適化する研究に取り組んでいます。時間のかかるシミュレーションをニューラルサロゲートで置き換えて施策の効果を素早く見積もる手法、介護送迎や避難経路の計画を数理最適化と機械学習で解く手法、災害時にも機能する LoRa 通信や情報集約の仕組みが主なテーマです。",
     primary: { label: "研究業績を見る", href: "/works/" },
     secondary: { label: "略歴・活動", href: "/cv/" },
     facts: [
@@ -30,9 +31,9 @@ const COPY = {
     name: "Akihito Hiromori",
     nameSub: "廣森 聡仁 · Ph.D. in Engineering",
     role: "Associate Professor, D3 Center, The University of Osaka · Dept. of Information Networking, Graduate School of Information Science and Technology (concurrent)",
-    headline: "Information systems that account for human mobility",
+    headline: ["Evaluating and optimizing large-scale social systems with simulation and machine learning"],
     lede:
-      "I design and evaluate information systems by combining real-world sensing of people, vehicles and environments with simulation, optimization and machine learning. Current topics include neural surrogate models for simulation, smart-city optimization, 3D point-cloud sensing and disaster-resilient networking.",
+      "I evaluate and optimize large-scale systems such as pedestrian and traffic flows, wireless communications and satellite constellations using simulation and machine learning. Main topics include neural surrogate models that replace time-consuming simulations to rapidly estimate the impact of policies, methods combining mathematical optimization and machine learning for nursing-care transport and evacuation route planning, and LoRa communication and information-gathering systems that keep working in disasters.",
     primary: { label: "View publications", href: "/en/publications/" },
     secondary: { label: "CV", href: "#cv" },
     facts: [
@@ -69,9 +70,16 @@ export function ProfileHero({ lang }: { lang: Lang }) {
         </HStack>
 
         <VStack gap={4}>
+          <div className="hero-title">
           <Heading level={1} type="display-2" weight="bold" textWrap="pretty">
-            {c.headline}
+            {c.headline.map((line, i) => (
+              <Fragment key={line}>
+                {i > 0 && <br />}
+                {line}
+              </Fragment>
+            ))}
           </Heading>
+          </div>
           <Text as="p" type="large" weight="normal" color="secondary" display="block">
             <span className="lede" style={{ display: "block" }}>{c.lede}</span>
           </Text>

@@ -84,6 +84,8 @@ h1, h2, h3 { word-break: auto-phrase; text-wrap: pretty; font-feature-settings: 
 @media (max-width: 860px) { .two-col { grid-template-columns: minmax(0, 1fr); } }
 
 .lede { max-width: 42em; }
+/* ホームの見出しは狭い画面で一段小さく（細切れの改行を防ぐ） */
+@media (max-width: 520px) { .hero-title h1 { font-size: 28px; line-height: 1.3; } }
 .mail-at { color: var(--color-text-secondary); padding-inline: 2px; }
 
 @media print {
